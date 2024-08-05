@@ -1,0 +1,52 @@
+import React, { useState, useEffect, useContext } from "react";
+import { ShowContext } from "../App";
+import API from "../API";
+
+const DignitoryPhotos = () => {
+  const { setShow, setMsg } = useContext(ShowContext);
+  const [photos, setPhotos] = useState();
+
+  useEffect(() => {
+    getDignitoriesPhotos(setPhotos, setShow, setMsg);
+  }, []);
+
+  return (
+    <>
+      <div className="row ImagesPoliticians">
+        {photos &&
+          photos.map((photo, index) => {
+            return (
+              <div className="col-lg-3 col-sm-3 col-6 mb-3" key={index}>
+                <div className="card Removerborder">
+                  <img
+                    className="img-fluid"
+                    src={photo.img_path}
+                    alt={photo.name}
+                  />
+                </div>
+                <span className="names">{photo.name}</span>
+                <span className="names1" style={{ textAlign: "center" }}>
+                  {photo.post}
+                </span>
+              </div>
+            );
+          })}
+      </div>
+    </>
+  );
+};
+
+function getDignitoriesPhotos(setPhotos, setShow, setMsg) {
+  API.get("photo")
+    .then((res) => {
+      if (res.data.status === "success") {
+        setPhotos(res.data.data);
+      }
+    })
+    .catch((error) => {
+      setShow(true);
+      setMsg(error.response.data.message);
+    });
+}
+
+export default DignitoryPhotos;
