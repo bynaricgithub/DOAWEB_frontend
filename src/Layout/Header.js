@@ -144,13 +144,16 @@ function Header() {
             <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
               <a href="/" className="my-3">
                 <img
-                  src="/assets/Images1/mainlogo.png"
+                  src="/assets/Images1/gom.jpg"
                   className="rounded-circle img-fluid"
                   alt="Logo"
                 />
                 <h3 className="notranslate">
-                  Maharashtra State Board of Technical Education, Mumbai <br />
-                  <small>महाराष्ट्र राज्य तंत्र शिक्षण मंडळ, मुंबई</small>
+                Maharashtra
+State Board
+of Art Education
+               
+                 
                 </h3>
                 {/* <img
                   src="/assets/Images1/main_secondlogo.png"

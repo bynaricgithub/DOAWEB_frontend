@@ -333,7 +333,9 @@ function Footer() {
             </ul>
           </div>
           <p className="footertext my-1">
-            Maharashtra State Board of Technical Education, Mumbai. All Rights
+          Maharashtra
+State Board
+of Art Education, All Rights
             Reserved.
           </p>
           <div className=" marginDiv py-1 my-2">

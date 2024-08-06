@@ -8,9 +8,9 @@ import TabBox from "./TabBox";
 
 function Main() {
   const longText =
-    "Maharashtra State Board of Technical Education (MSBTE) is an autonomous Board of Government of Maharashtra mandated to regulate matters pertaining to Diploma Level Technical education in the state. Curriculum development- it’s efficient implementation strategies through faculty development programs, student development initiatives, industry-institution interaction, Academic monitoring and various online evaluation activities have been the significant insignia of MSBTE. In the recent past, MSBTE has made its foray into skill development activities, thus broadening its horizon and area of service. However, the revision of curricular to suit the essentially of industry as expected from diploma students had become a dire need and of late a very important parameter for employ ability which has been accomplished and implemented from the academic year 2017-18.";
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.";
   const longText2 =
-    "Having been closely associated with the system and from the suggestions and feedback of the stake holders, it shall be my endeavor to revamp the various processes and adopt better technological implementation & evaluation techniques for the benefit of stake holder students.";
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   aliquip ex ea commodo consequat. Duis aute irure dolor in   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in   culpa qui officia deserunt mollit anim id est laborum.";
   return (
     <>
       <div className="row justify-content-center">
@@ -37,13 +37,13 @@ function Main() {
                       <div className="card Removerborder marginFont">
                         <img
                           className="img-fluid"
-                          src="https://msbteadmin.bynaricexam.com/data/dignitaries/Photo_Shri_Pramod_A._Naik.png"
-                          alt="Shri Pramod A. Naik"
+                          src="/assets/Images1/person.jpg"
+                          alt="Shri. Vinod R. Dandge"
                           style={{ borderRadius: "50%", maxHeight: "150px" }}
                         />
                       </div>
-                      <span className="names"> Shri Pramod A. Naik</span>
-                      <span className="names3"> Director MSBTE</span>
+                      <span className="names">Shri. Vinod R. Dandge</span>
+                      <span className="names3"> Director DOA</span>
                       {/* <span className="names3">
                           <a className="viewprofile" href="/director_profile">
                           view profile

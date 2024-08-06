@@ -28,6 +28,7 @@ const EventCorousel = () => {
                   key={index}
                 >
                   <img
+                  // src="/assets/Images1/director.png"
                     src={eve.img_path}
                     className="d-block w-100"
                     alt={eve.name}
