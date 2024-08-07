@@ -61,7 +61,7 @@ function Header() {
           <div className="row">
             <div className="col-xl-9 col-lg-7 col-sm-5">
               <a
-                href="https://msbte.org.in/"
+                href=""
                 target="_blank"
                 className="text-white" 
               >
@@ -144,7 +144,7 @@ function Header() {
             <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
               <a href="/" className="my-3">
                 <img
-                  src="/assets/Images1/gom.jpg"
+                  src="/assets/Images1/DOA-logo.png"
                   className="rounded-circle img-fluid"
                   alt="Logo"
                 />
