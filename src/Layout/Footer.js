@@ -249,87 +249,44 @@ function Footer() {
           <div className="row">
             <ul className="">
               <li>
-                <Link to={{ pathname: "/disclaimer" }} target="_top">
-                  Disclaimer
+                <Link to={{ pathname: "/" }} target="_top">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link to={{ pathname: "/policie" }} target="_top">
-                  Policies
+                <Link to={{ pathname: "/" }} target="_top">
+                  About
                 </Link>
               </li>
               <li>
-                <Link to={{ pathname: "/terms-and-condition" }} target="_top">
-                  Terms & Conditions
+                <Link to={{ pathname: "/" }} target="_top">
+                Institutes
                 </Link>
               </li>
               <li>
                 <Link
-                  to={{ pathname: "/accessibility-statement" }}
+                  to={{ pathname: "/" }}
                   target="_top"
                 >
-                  Accessibility Statement
+                  Admission
                 </Link>
               </li>
               <li>
                 <a
-                  href="https://grievance.msbte.ac.in/grievance/"
+                  href=""
                   target="_blank "
                 >
-                  Grievance Redressal
+                  Examination
                 </a>
               </li>
               <li>
                 <a href="#" target="_blank ">
-                  Feedback
+                Contact
                 </a>
               </li>
 
-              <li>
-                <Link to={{ pathname: "/Faq" }} target="_top">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <a
-                  // href="/assets/file/SampleTranscriptCertificate060620221720.pdf"
-                  // data-bs-toggle="modal"
-                  // data-bs-target="#trascertfificatepdf"
-                  // target="_blank"
-
-                  href="#"
-                  onClick={() => {
-                    handleShow();
-                    setFile("/assets/file/RTI.pdf");
-                  }}
-                >
-                  RTI
-                </a>
-              </li>
-              <li>
-                <Link to={{ pathname: "/help" }} target="_top">
-                  Help
-                </Link>
-              </li>
-              {/* <li>
-                <Link to={{ pathname: "/services" }} target="_top">Service</Link>
-              </li> */}
-              <li>
-                <Link to={{ pathname: "/sitemap" }} target="_top">
-                  Site map
-                </Link>
-              </li>
-              {/* <li>
-                <Link to={{ pathname: "/feedback" }} target="_top">Feedback </Link>
-              </li> */}
-              {/* <li>
-                <Link to={{ pathname: "/archive" }} target="_top">Archive</Link>
-              </li> */}
-              {/* <li>
-                <Link to={{ pathname: "/screen-reader-access" }} target="_top">
-                  Screen Reader Access
-                </Link>
-              </li> */}
+              
+              
             </ul>
           </div>
           <p className="footertext my-1">

@@ -65,7 +65,7 @@ function Header() {
                 target="_blank"
                 className="text-white" 
               >
-                <span>&lt; Visit Old site &gt;</span>
+                {/* <span>&lt; Visit Old site &gt;</span> */}
               </a>
             </div>
             <div className="col-xl-3 col-lg-5 col-sm-7">
