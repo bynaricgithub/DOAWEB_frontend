@@ -50,6 +50,9 @@ import Aurangabad_Region from "../Components/Chatrapati_Shambhaji_Nagar_Region";
 import OnlineProceduretranscertificate from "../Components/OnlineProceduretranscertificate";
 import OnlineMigrationcertificate from "../Components/OnlineMigrationcertificate";
 import ImportanceOfDiploma from "../Components/ImportanceOfDiploma";
+import News from "./news";
+import Contact from "../Components/Menupages/contact";
+import About from "../Components/Menupages/about";
 
 function Content() {
   // path==="/"?console.log("home"):console.log("nothome")
@@ -147,6 +150,9 @@ function Content() {
             <Route path="/importantce-of-diploma" element={<ImportanceOfDiploma />} />
 
             <Route path="/viewInstitutes" element={<ViewInstitutes />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact/>} />
+            <Route path="/about" element={<About/>} />
             <Route path="/all_circulars" element={<AllCircular />} />
             <Route element={<WithoutNav />}>
               <Route path="/admin" element={<Admin />} />

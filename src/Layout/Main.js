@@ -5,6 +5,7 @@ import DignitoryPhotos from "./DignitoryPhotos";
 import EventCorousel from "./EventCorousel";
 import ImportantLinks from "./ImportantLinks";
 import TabBox from "./TabBox";
+import News from "./news";
 
 function Main() {
   const longText =
@@ -91,11 +92,12 @@ function Main() {
             {/* <div className="col-lg-6 col-sm-12 mb-3 marginCard">
               <ImportantLinks />
             </div> */}
-            <div className="col-lg-8 col-sm-12 mb-3 marginCard">
-              <TabBox />
-            </div>
-            <div className="col-lg-4 col-sm-12 mb-3 marginCard">
+            <div className="col-lg-6 col-sm-12 mb-3 marginCard">
+              {/* <TabBox /> */}
               <Circulars />
+            </div>
+            <div className="col-lg-6 col-sm-12 mb-3 marginCard">
+              <News />
             </div>
           </div>
         </div>

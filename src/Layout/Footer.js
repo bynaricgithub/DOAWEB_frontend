@@ -295,7 +295,7 @@ State Board
 of Art Education, All Rights
             Reserved.
           </p>
-          <div className=" marginDiv py-1 my-2">
+          <div className="footerLinks marginDiv py-1 my-2">
             <a
               href="#"
               title="Explanation of WCAG 2.0 Level Double-A Conformance"
@@ -415,7 +415,7 @@ of Art Education, All Rights
           </div>
           <div className="counterLink text-center">
             {visitor !== 0 ? (
-              <p className="visitorCount">
+              <p className="visitorCount footertext">
                 Visitor Count :&nbsp;{" "}
                 {String(visitor)
                   .split("")
@@ -428,7 +428,7 @@ of Art Education, All Rights
             )}
           </div>
           <div className="bottom-text pt-2 pb-3">
-            <span className="text-left">
+            <span className="text-left footertext">
               Last updated on :&nbsp;
               {lastUpdatedDate ? (
                 <Moment format="DD/MM/YY, hh:mm A">{lastUpdatedDate}</Moment>

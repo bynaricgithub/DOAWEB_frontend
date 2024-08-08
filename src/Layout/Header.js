@@ -56,16 +56,12 @@ function Header() {
 
   return (
     <>
-      <div className="d-flex justify-content-end translatorBar">
+      {/* <div className="d-flex justify-content-end translatorBar">
         <div className="container">
           <div className="row">
             <div className="col-xl-9 col-lg-7 col-sm-5">
-              <a
-                href=""
-                target="_blank"
-                className="text-white" 
-              >
-                {/* <span>&lt; Visit Old site &gt;</span> */}
+              <a href="" target="_blank" className="text-white">
+               
               </a>
             </div>
             <div className="col-xl-3 col-lg-5 col-sm-7">
@@ -79,31 +75,123 @@ function Header() {
                     />
                   </Link>
                 </div>
-                <div className="py-1">
-                  <GoogleTranslator />
+                <div className="windowzoom">
+                  <div
+                    className="d-flex justify-content-end marginForDivConatiner"
+                    id="font-setting-buttons">
+                    <div>
+                      <img
+                        src="/assets/Images1/black.png"
+                        onClick="chngebackgroundblack()"
+                        alt="change header footer colour to black"
+                        className="img-fluid marginCircle FontForCircle"/>
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/Images1/pink.png"
+                        className="img-fluid marginCircle FontForCircle"
+                        onClick="chngebackgroundpink()"
+                        alt="chnage header footer colour to balck"/>
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/Images1/pluss.png"
+                        className="img-fluid zoom marginforzoom increase-me"
+                        alt="zoomin"
+                        id="zoomIn"
+                        onClick={() => resizeText(fontSizeIncrement)}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/Images1/equal.png"
+                        className="img-fluid zoom-init marginforzoom reset-me"
+                        alt="zoomnormal"
+                        id="btnzoomNormal"
+                        onClick={resetFontSize}
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/Images1/minus.png"
+                        className="img-fluid zoom-out  marginforzoom decrease-me"
+                        alt="zoomout"
+                        id="zoomOut"
+                        onClick={() => resizeText(-fontSizeIncrement)}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <div className="fixed-header">
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
+              <a href="/" className="my-3">
+                <img
+                  src="/assets/Images1/DOA-logo.png"
+                  className="img-fluid"
+                  alt="Logo"
+                />
+                <h3 className="notranslate">
+                  Maharashtra State Board<br/> of Art Education
+                </h3>
+                {/* <img
+                  src="/assets/Images1/main_secondlogo.png"
+                  className="img-fluid px-2 my-auto"
+                  alt="Logo"
+                /> */}
+              </a>
+            </div>
+            <div className="col-xl-4 col-lg-6 col-sm-12">
+              <div className="row">
+                <div className="col-lg-5 col-sm-5 col-7 d-flex twologo logoImg3">
+                  <img
+                    src="/assets/Images1/image.png"
+                    className=""
+                    alt="Logo"
+                  />
+                  {/* <img
+                    src="/assets/Images1/image1.png"
+                    className=""
+                    alt="logo3"
+                  /> */}
+                </div>
+                <div className="col-lg-7 col-sm-7 col-5 removePaddingicons">
+                  <div className="lastDiv">
+                    <div className="pt-3 pb-2 Positionlanguage">
+                    <div className=" justify-content-end d-flex">
+                <div className="px-1">
+                  <Link to="/screen-reader-access">
+                    <img
+                      src="/assets/Images1/screenreader.png"
+                      alt="Screen Reader"
+                      className="screenReader"
+                    />
+                  </Link>
                 </div>
                 <div className="windowzoom">
                   <div
                     className="d-flex justify-content-end marginForDivConatiner"
-                    id="font-setting-buttons"
-                  >
-                    {/* <div>
-                    <img
-                      src="/assets/Images1/black.png"
-                      onClick="chngebackgroundblack()"
-                      alt="change header footer colour to black"
-                      className="img-fluid marginCircle FontForCircle"
-                    />
-                  </div>
-                  <div>
-                    <img
-                      src="/assets/Images1/pink.png"
-                      className="img-fluid marginCircle FontForCircle"
-                      onClick="chngebackgroundpink()"
-                      alt="chnage header footer colour to balck"
-                    />
-                  </div> */}
-
+                    id="font-setting-buttons">
+                    <div>
+                      <img
+                        src="/assets/Images1/black.png"
+                        onClick="chngebackgroundblack()"
+                        alt="change header footer colour to black"
+                        className="img-fluid marginCircle FontForCircle"/>
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/Images1/pink.png"
+                        className="img-fluid marginCircle FontForCircle"
+                        onClick="chngebackgroundpink()"
+                        alt="chnage header footer colour to balck"/>
+                    </div>
                     <div>
                       <img
                         src="/assets/Images1/pluss.png"
@@ -134,52 +222,12 @@ function Header() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="fixed-header">
-        <div className="container">
-          <div className="row d-flex justify-content-center">
-            <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
-              <a href="/" className="my-3">
-                <img
-                  src="/assets/Images1/DOA-logo.png"
-                  className="rounded-circle img-fluid"
-                  alt="Logo"
-                />
-                <h3 className="notranslate">
-                Maharashtra
-State Board
-of Art Education
-               
-                 
-                </h3>
-                {/* <img
-                  src="/assets/Images1/main_secondlogo.png"
-                  className="img-fluid px-2 my-auto"
-                  alt="Logo"
-                /> */}
-              </a>
-            </div>
-            <div className="col-xl-4 col-lg-6 col-sm-12">
-              <div className="row">
-                <div className="col-lg-5 col-sm-5 col-7 d-flex twologo logoImg3">
-                  <img
-                    src="/assets/Images1/image.png"
-                    className=""
-                    alt="Logo"
-                  />
-                  {/* <img
-                    src="/assets/Images1/image1.png"
-                    className=""
-                    alt="logo3"
-                  /> */}
-                </div>
-                <div className="col-lg-7 col-sm-7 col-5 removePaddingicons">
-                  <div className="lastDiv">
-                    <div className="pt-3 pb-2 Positionlanguage">
-                      <div className="search d-flex mt-2 m-hide">
+                       {/* <GoogleTranslator /> */}
+                      <div className="search d-flex mt-2 m-hide"> 
+                        <div className="py-2">
+                        <GoogleTranslator />
+                        </div>
+                      
                         <input
                           type="text"
                           className="form-control"
