@@ -53,11 +53,17 @@ import ImportanceOfDiploma from "../Components/ImportanceOfDiploma";
 import News from "./news";
 import Contact from "../Components/Menupages/contact";
 import About from "../Components/Menupages/about";
+import Affilation from "../Components/Menupages/affilation";
+import Institute from "../Components/Menupages/institute";
+import Examination from "../Components/Menupages/examination";
+import Admission from "../Components/Menupages/admission";
+
 
 function Content() {
   // path==="/"?console.log("home"):console.log("nothome")
   return (
     <>
+     
       <main
         id="imageMainHomePage"
         className="post"
@@ -66,7 +72,16 @@ function Content() {
         <div className="container" id="paddingForContainer">
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="/aboutMsbte" element={<AboutMsbte />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/affilation" element={<Affilation />} />
+          <Route path="/institute" element={<Institute />} />
+          <Route path="/examination" element={<Examination />} />
+          <Route path="/admission" element={<Admission />} />
+          <Route path="/sitemap" element={<SiteMap />} />
+
+            {/* <Route path="/aboutMsbte" element={<AboutMsbte />} />
             <Route path="/coreValues" element={<CoreValues />} />
             <Route path="/visionAndMission" element={<Vision />} />
             <Route path="/qualityPolicy" element={<QualityPolicy />} />
@@ -82,7 +97,10 @@ function Content() {
             <Route path="/mumbai_region" element={<Mumbai_Region />} />
             <Route path="/pune_region" element={<Pune_region />} />
             <Route path="/nagpur_region" element={<Nagpur_region />} />
-            <Route path="/chatrapati_shambhaji_nagar_region" element={<Aurangabad_Region />} />
+            <Route
+              path="/chatrapati_shambhaji_nagar_region"
+              element={<Aurangabad_Region />}
+            />
 
             <Route path="/careerFair" element={<CareerFair />} />
             <Route path="/activities" element={<Activities />} />
@@ -136,7 +154,7 @@ function Content() {
             <Route path="/help" element={<Help />} />
             <Route path="/services" element={<Services />} />
             <Route path="/feedback" element={<Feedback />} />
-            <Route path="/sitemap" element={<SiteMap />} />
+         
             <Route path="/faq" element={<Faq />} />
             <Route path="/online-activities" element={<Online_Activities />} />
             <Route
@@ -147,13 +165,13 @@ function Content() {
             <Route path="/msbteVideoLectures" element={<VideoLectures />} />
             <Route path="/director_profile" element={<DirectorProfile />} />
             <Route path="/search" element={<Search />} />
-            <Route path="/importantce-of-diploma" element={<ImportanceOfDiploma />} />
+            <Route
+              path="/importantce-of-diploma"
+              element={<ImportanceOfDiploma />}
+            />
 
             <Route path="/viewInstitutes" element={<ViewInstitutes />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/contact" element={<Contact/>} />
-            <Route path="/about" element={<About/>} />
-            <Route path="/all_circulars" element={<AllCircular />} />
+            <Route path="/all_circulars" element={<AllCircular />} /> */}
             <Route element={<WithoutNav />}>
               <Route path="/admin" element={<Admin />} />
             </Route>

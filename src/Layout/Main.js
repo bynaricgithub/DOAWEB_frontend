@@ -20,7 +20,7 @@ function Main() {
             <EventCorousel />
           </div>
         </div>
-        <div className="col-lg-6 col-sm-12 mt-3">
+        <div className="col-lg-6 col-sm-12">
           <div className="container-fluid">
             <div className="row">
               <div className="col-lg-12 col-sm-12 m-auto">
@@ -52,7 +52,7 @@ function Main() {
                       </span> */}
                     </div>
                     <div className="col-lg-8 col-sm-7">
-                      <div className="card-body">
+                      <div className="card-body p-2">
                         <p
                           className="fontForDesk"
                           id="fontfordirectordesk"
@@ -87,7 +87,7 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="table-section post">
+        <div className="table-section post mt-2">
           <div className="row">
             {/* <div className="col-lg-6 col-sm-12 mb-3 marginCard">
               <ImportantLinks />

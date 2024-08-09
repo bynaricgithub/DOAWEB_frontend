@@ -249,43 +249,51 @@ function Footer() {
           <div className="row">
             <ul className="">
               <li>
-                <Link to={{ pathname: "/" }} target="_top">
+              <a
+                  href="/"
+                  target="_blank ">
                   Home
-                </Link>
+               </a>
               </li>
               <li>
-                <Link to={{ pathname: "/" }} target="_top">
+              <a
+                  href="/about"
+                  target="_blank ">
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to={{ pathname: "/" }} target="_top">
-                Institutes
-                </Link>
+              <a
+                  href="/institute"
+                  target="_blank ">Institutes</a>  
               </li>
               <li>
-                <Link
-                  to={{ pathname: "/" }}
-                  target="_top"
+              <a
+                  href="/admission"
+                  target="_blank "
                 >
                   Admission
-                </Link>
+                </a>
               </li>
               <li>
                 <a
-                  href=""
+                  href="/examination"
                   target="_blank "
                 >
                   Examination
                 </a>
               </li>
               <li>
-                <a href="#" target="_blank ">
+                <a href="/contact" target="_blank ">
                 Contact
                 </a>
               </li>
 
-              
+              <li>
+                <a href="/sitemap" target="_blank ">
+                SiteMap
+                </a>
+              </li>
               
             </ul>
           </div>

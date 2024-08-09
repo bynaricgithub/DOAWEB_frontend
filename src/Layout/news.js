@@ -36,12 +36,8 @@ const News = () => {
     <>
       <div className="card border border-light shadow-0 mb-3">
         <div className="card-header backgroundColorCircular">
-          <span className="all-cricular pull-right">
-            <Link to={"/all_circulars"} className="link p-2">
-              All News
-            </Link>
-          </span>
-          <h4> News</h4>
+        
+          <h4> Notices & Announcements</h4>
         </div>
         <div className="card-body overflow-auto heighttableDiv">
           {/* <table className="table table-borderless circulars">

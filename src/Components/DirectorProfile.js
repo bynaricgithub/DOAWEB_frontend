@@ -5,7 +5,7 @@ function DirectorProfile() {
         <h1 className="fontForHeader">Director's Profile</h1>
       </div>
       <div className="row g-0">
-        <div className="card-body removePadding">
+        <div className="card-body removePadding p-1">
           <img
             className="img-fluid float-start me-4"
             src="/assets/Images1/director.png"

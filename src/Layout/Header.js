@@ -131,7 +131,7 @@ function Header() {
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
-              <a href="/" className="my-3">
+              <a href="/" className="mt-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
                   className="img-fluid"
@@ -140,39 +140,36 @@ function Header() {
                 <h3 className="notranslate">
                   Maharashtra State Board<br/> of Art Education
                 </h3>
-                {/* <img
-                  src="/assets/Images1/main_secondlogo.png"
-                  className="img-fluid px-2 my-auto"
-                  alt="Logo"
-                /> */}
+              
               </a>
             </div>
             <div className="col-xl-4 col-lg-6 col-sm-12">
               <div className="row">
                 <div className="col-lg-5 col-sm-5 col-7 d-flex twologo logoImg3">
+                {/* <img
+                    src="/assets/Images1/image1.png"
+                    className=""
+                    alt="logo3"
+                  /> */}
                   <img
                     src="/assets/Images1/image.png"
                     className=""
                     alt="Logo"
                   />
-                  {/* <img
-                    src="/assets/Images1/image1.png"
-                    className=""
-                    alt="logo3"
-                  /> */}
+                 
                 </div>
                 <div className="col-lg-7 col-sm-7 col-5 removePaddingicons">
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
                     <div className=" justify-content-end d-flex">
                 <div className="px-1">
-                  <Link to="/screen-reader-access">
+                  {/* <Link to="/screen-reader-access">
                     <img
                       src="/assets/Images1/screenreader.png"
                       alt="Screen Reader"
                       className="screenReader"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="windowzoom">
                   <div
@@ -224,7 +221,7 @@ function Header() {
               </div>
                        {/* <GoogleTranslator /> */}
                       <div className="search d-flex mt-2 m-hide"> 
-                        <div className="py-2">
+                        <div className="pt-1">
                         <GoogleTranslator />
                         </div>
                       

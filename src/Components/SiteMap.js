@@ -2,27 +2,26 @@ import React, { useState, useEffect, useContext } from "react";
 import { ShowContext } from "../App";
 import API from "../API";
 
-const footer = {
-  title: "Footer",
-  menu_url: "",
-  children: [
-    { title: "Disclaimer", menu_url: "/disclaimer" },
-    { title: "Policies", menu_url: "/policie" },
-    {
-      title: "Terms & Conditions",
-      menu_url: "/terms-and-condition",
-    },
-    {
-      title: "Accessibility Statement",
-      menu_url: "/accessibility-statement",
-    },
-    { title: "Grievance Redressal ", menu_url: "/grievance" },
-    { title: "Feedback", menu_url: "/feedback" },
-    { title: "FAQ ", menu_url: "/Faq" },
-    { title: "Help ", menu_url: "/help" },
-    { title: "Site map", menu_url: "/sitemap" },
-  ],
-};
+// const footer = {
+//   title: "Footer",
+//   menu_url: "",
+//   children: [
+//     { title: "Home ", menu_url: "/" },
+//     { title: "About", menu_url: "/about" },
+//     {
+//       title: "Institutes",
+//       menu_url: "/institute",
+//     },
+//     {
+//       title: "Examination",
+//       menu_url: "/examination",
+//     },
+//     { title: "Admission ", menu_url: "/admission" },
+//     { title: "Affiliation", menu_url: "/affilation" },
+//     { title: "Contact ", menu_url: "/contact" },
+//     { title: "Site map", menu_url: "/sitemap" },
+//   ],
+// };
 
 function SiteMap() {
   const { setShow, setMsg } = useContext(ShowContext);
@@ -104,6 +103,9 @@ function SiteMap() {
         <div className="row g-0">
           <div className="card-body removePadding">
             <div className="px-2 mx-3">
+              {
+                console.log(list)
+              }
               {list &&
                 list.length > 0 &&
                 list.map((item, index) => (
@@ -133,7 +135,7 @@ function getMenu(setList, setShow, setMsg) {
               children: arrayToTree(arr, child.id),
             }));
         let list = arrayToTree(res.data.data, 0);
-        setList([...list, footer]);
+        setList([...list]);
       }
     })
     .catch((error) => {
