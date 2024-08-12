@@ -27,20 +27,18 @@ const News = () => {
     }
   };
 
-  // useEffect(() => {
-  //   getCirculars(setCirculars, setShow, setMsg);
-  // }, []);
+  useEffect(() => {
+    getNews(setCirculars, setShow, setMsg);
+  }, []);
 
   let i = 1;
   return (
     <>
       <div className="card border border-light shadow-0 mb-3">
         <div className="card-header backgroundColorCircular">
-        
           <h4> Notices & Announcements</h4>
         </div>
         <div className="card-body overflow-auto heighttableDiv">
-         
           <marquee
             behavior="scroll"
             direction="up"
@@ -51,26 +49,29 @@ const News = () => {
             ref={marqueeRef}
             className="circularBox"
           >
-             <ul className="listIcon">
-
-<li className="circularsList">
-  <a href="https://dge.msbae.in/" className="py-1" target="_blank">
-  Click here for center registration and student registration
-
-  </a>
-</li>
-
-<li className="circularsList">
-  <a href="https://doaonline.in/institute-login" className="py-1" target="_blank">
-  Click here for affilation registration form
-  </a>
-</li>
-<li className="circularsList">
-  <a href="https://sss.msbae.in/ay2425/" className="py-1" target="_blank">
-  Fees Approval System For Academic Year 2024-25
-  </a>
-</li>
-</ul>
+          
+            <ul className="listIcon">
+              {circulars &&
+                circulars
+                  // .filter((circular) => circular.category === 1)
+                  .sort((a, b) => new Date(b.date) - new Date(a.date))
+                  .slice(0, 20)
+                  .map((circular, index) => (
+                    <li className="circularsList" key={index}>
+                      <a
+                        href="#"
+                        className="py-1"
+                        aria-disabled="true"
+                        onClick={() => {
+                          handleShow();
+                          setFile(circular.url);
+                        }}
+                      >
+                        {circular.heading}
+                      </a>
+                    </li>
+                  ))}
+            </ul>
           </marquee>
         </div>
         <Modal
@@ -89,8 +90,8 @@ const News = () => {
   );
 };
 
-async function getCirculars(setCirculars, setShow, setMsg) {
-  API.get("circulars")
+async function getNews(setCirculars, setShow, setMsg) {
+  API.get("news")
     .then((res) => {
       if (res.data.status === "success") {
         setCirculars(res.data.data);
