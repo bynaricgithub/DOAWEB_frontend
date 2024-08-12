@@ -36,11 +36,11 @@ const Circulars = () => {
     <>
       <div className="card border border-light shadow-0 mb-3">
         <div className="card-header backgroundColorCircular">
-          <span className="all-cricular pull-right">
+          {/* <span className="all-cricular pull-right">
             <Link to={"/all_circulars"} className="link p-2">
               All Circulars
             </Link>
-          </span>
+          </span> */}
           <h4> CIRCULARS</h4>
         </div>
         <div className="card-body overflow-auto heighttableDiv">

@@ -27,9 +27,9 @@ const News = () => {
     }
   };
 
-  useEffect(() => {
-    getCirculars(setCirculars, setShow, setMsg);
-  }, []);
+  // useEffect(() => {
+  //   getCirculars(setCirculars, setShow, setMsg);
+  // }, []);
 
   let i = 1;
   return (
@@ -40,47 +40,7 @@ const News = () => {
           <h4> Notices & Announcements</h4>
         </div>
         <div className="card-body overflow-auto heighttableDiv">
-          {/* <table className="table table-borderless circulars">
-            <thead>
-              <tr className="text-center">
-                <th>Sr.No</th>
-                <th>Date</th>
-                <th>News</th>
-              </tr>
-            </thead>
-            <tbody>
-              {circulars &&
-                circulars.map((circular, index) => {
-                  return (
-                    <tr key={index}>
-                      <td className="text-center">{i++}</td>
-                      <td>
-                        {
-                          <Moment format="DD/MM/YY">
-                            {circular.fromDate}
-                          </Moment>
-                        }
-                      </td>
-                      <td colSpan="4">
-                        <a
-                          //   href={circular.url}
-                          className="py-1"
-                          //   data-bs-toggle="modal"
-                          href="#"
-                          aria-disabled="true" 
-                          onClick={() => {
-                            handleShow();
-                            setFile(circular.url);
-                          }}
-                        >
-                          {circular.heading}
-                        </a>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table> */}
+         
           <marquee
             behavior="scroll"
             direction="up"
@@ -91,28 +51,26 @@ const News = () => {
             ref={marqueeRef}
             className="circularBox"
           >
-            <ul>
-              {circulars &&
-                circulars
-                  .filter((circular) => circular.category === 1)
-                  .sort((a, b) => new Date(b.date) - new Date(a.date))
-                  .slice(0, 20)
-                  .map((circular, index) => (
-                    <li className="circularsList" key={index}>
-                      <a
-                        href="#"
-                        className="py-1"
-                        aria-disabled="true"
-                        onClick={() => {
-                          handleShow();
-                          setFile(circular.url);
-                        }}
-                      >
-                        {circular.heading}
-                      </a>
-                    </li>
-                  ))}
-            </ul>
+             <ul className="listIcon">
+
+<li className="circularsList">
+  <a href="https://dge.msbae.in/" className="py-1" target="_blank">
+  Click here for center registration and student registration
+
+  </a>
+</li>
+
+<li className="circularsList">
+  <a href="https://doaonline.in/institute-login" className="py-1" target="_blank">
+  Click here for affilation registration form
+  </a>
+</li>
+<li className="circularsList">
+  <a href="https://sss.msbae.in/ay2425/" className="py-1" target="_blank">
+  Fees Approval System For Academic Year 2024-25
+  </a>
+</li>
+</ul>
           </marquee>
         </div>
         <Modal
