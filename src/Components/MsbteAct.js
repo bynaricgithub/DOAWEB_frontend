@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function MsbteAct() {
@@ -9,7 +8,7 @@ function MsbteAct() {
   const handleShow = () => setShowModal(true);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">MSBTE ACT</h1>
         </div>

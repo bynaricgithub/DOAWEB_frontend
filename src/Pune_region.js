@@ -3,7 +3,7 @@ import React from "react";
 function Pune_region() {
   return (
     <div>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader linearimg">
           <h1 className="fontForHeader">Pune Region</h1>
         </div>

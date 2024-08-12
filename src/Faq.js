@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function Faq() {
@@ -11,7 +10,7 @@ function Faq() {
     <>
       <div className="row ">
         <div className="col-sm-12">
-          <div className="card RemoverBorderRadius">
+          <div className="card removerborderRadius">
             <div className="card-header backgroundColorCardHeader linearimg">
               <h1 className="fontForHeader"> FREQUENTLY ASKED QUESTION</h1>
             </div>

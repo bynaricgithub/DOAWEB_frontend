@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import API from "../API";
+import { ShowContext } from "../App";
 
 // const footer = {
 //   title: "Footer",
@@ -96,16 +96,14 @@ function SiteMap() {
   }
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">Site Map</h1>
         </div>
         <div className="row g-0">
           <div className="card-body removePadding">
             <div className="px-2 mx-3">
-              {
-                console.log(list)
-              }
+              {console.log(list)}
               {list &&
                 list.length > 0 &&
                 list.map((item, index) => (

@@ -3,8 +3,6 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 import Circulars from "./Circulars";
 import DignitoryPhotos from "./DignitoryPhotos";
 import EventCorousel from "./EventCorousel";
-import ImportantLinks from "./ImportantLinks";
-import TabBox from "./TabBox";
 import News from "./news";
 
 function Main() {
@@ -35,7 +33,7 @@ function Main() {
 
                   <div className="row g-0">
                     <div className="col-lg-4 col-sm-5">
-                      <div className="card Removerborder marginFont">
+                      <div className="card removerborder marginFont">
                         <img
                           className="img-fluid"
                           src="/assets/Images1/person.jpg"
@@ -53,10 +51,7 @@ function Main() {
                     </div>
                     <div className="col-lg-8 col-sm-7">
                       <div className="card-body p-2">
-                        <p
-                          className="fontForDesk"
-                          id="fontfordirectordesk"
-                        >
+                        <p className="fontForDesk" id="fontfordirectordesk">
                           <ReactReadMoreReadLess
                             charLimit={460}
                             readMoreText={"Read more ▼"}
@@ -101,7 +96,7 @@ function Main() {
             </div>
           </div>
         </div>
-        
+
         {/* <!-- login model --> */}
         {/* <div
           className="modal fade"

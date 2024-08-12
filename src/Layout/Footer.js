@@ -1,13 +1,12 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ShowContext } from "../App";
 
-import Carousel from "react-multi-carousel";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
-import "react-multi-carousel/lib/styles.css";
-import API from "../API";
-import moment from "moment";
-import Moment from "react-moment";
 import Modal from "react-bootstrap/Modal";
+import Moment from "react-moment";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { useNavigate } from "react-router-dom";
+import API from "../API";
 
 function Footer() {
   const { setShow, setMsg } = useContext(ShowContext);
@@ -249,59 +248,45 @@ function Footer() {
           <div className="row">
             <ul className="">
               <li>
-              <a
-                  href="/"
-                  target="_blank ">
+                <a href="/" target="_blank ">
                   Home
-               </a>
+                </a>
               </li>
               <li>
-              <a
-                  href="/about"
-                  target="_blank ">
+                <a href="/about" target="_blank ">
                   About
                 </a>
               </li>
               <li>
-              <a
-                  href="/institute"
-                  target="_blank ">Institutes</a>  
+                <a href="/institute" target="_blank ">
+                  Institutes
+                </a>
               </li>
               <li>
-              <a
-                  href="/admission"
-                  target="_blank "
-                >
+                <a href="/admission" target="_blank ">
                   Admission
                 </a>
               </li>
               <li>
-                <a
-                  href="/examination"
-                  target="_blank "
-                >
+                <a href="/examination" target="_blank ">
                   Examination
                 </a>
               </li>
               <li>
                 <a href="/contact" target="_blank ">
-                Contact
+                  Contact
                 </a>
               </li>
 
               <li>
                 <a href="/sitemap" target="_blank ">
-                SiteMap
+                  SiteMap
                 </a>
               </li>
-              
             </ul>
           </div>
           <p className="footertext my-1">
-          Maharashtra
-State Board
-of Art Education, All Rights
-            Reserved.
+            Maharashtra State Board of Art Education, All Rights Reserved.
           </p>
           <div className="footerLinks marginDiv py-1 my-2">
             <a

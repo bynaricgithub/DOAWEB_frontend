@@ -3,7 +3,7 @@ import React from "react";
 function AboutMsbte() {
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader linearimg">
           <h1 className="fontForHeader">ABOUT MSBTE</h1>
         </div>

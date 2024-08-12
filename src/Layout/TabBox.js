@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext, useRef } from "react";
-import { ShowContext } from "../App";
-import API from "../API";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Moment from "react-moment";
+import API from "../API";
+import { ShowContext } from "../App";
 
 const TabBox = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -48,7 +48,7 @@ const TabBox = () => {
             >
               GR
             </button>
-           
+
             <button
               className={activeTab === 5 ? "active" : ""}
               onClick={() => setActiveTab(5)}
@@ -221,7 +221,7 @@ const TabBox = () => {
                 </table>
               </div>
             )}
-          
+
             {activeTab === 5 && (
               <div className="overflow-auto heighttableDiv2">
                 <table className="table table-borderless circulars border border-light">

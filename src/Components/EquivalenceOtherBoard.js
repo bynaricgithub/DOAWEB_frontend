@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function EquivalenceOtherBoard() {
@@ -12,7 +11,7 @@ function EquivalenceOtherBoard() {
     <>
       <div className="row ">
         <div className="col-sm-12">
-          <div className="card border border-light shadow-0 mb-3 RemoverBorderRadius">
+          <div className="card border border-light shadow-0 mb-3 removerborderRadius">
             <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">EQUIVALENCE (OTHER BOARD)</h1>
             </div>

@@ -14,7 +14,7 @@ const VideoLinks = [
 
 function VideoLectures() {
   return (
-    <div className="card mb-3  borderforcard paddingAboutMsbte">
+    <div className="card mb-3  borderforcard paddingTopxl">
       <div className="card-header backgroundColorCardHeader">
         <h1 className="fontForHeader">MSBTE Video Lectures</h1>
       </div>

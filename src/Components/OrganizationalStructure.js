@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function OrganizationalStructure() {
   return (
     <>
-      {/* <div class="card mb-3  borderforcard paddingAboutMsbte">
+      {/* <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">ORGANIZATIONAL STRUCTURE</p>
         </div>
@@ -19,21 +18,21 @@ function OrganizationalStructure() {
                 />
               </div>
               <div className="col-xl-4 col-sm-12">
-                <div class="card mb-2  borderforcard paddingAboutMsbte">
+                <div class="card mb-2  borderforcard paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <Link class="fontForHeader d-block" to="/governingCouncil">
                       Governing Council
                     </Link>
                   </div>
                 </div>
-                <div class="card mb-2  borderforcard paddingAboutMsbte">
+                <div class="card mb-2  borderforcard paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <Link class="fontForHeader d-block" to="/governingBoard">
                       Board
                     </Link>
                   </div>
                 </div>
-                <div class="card mb-2  borderforcard paddingAboutMsbte">
+                <div class="card mb-2  borderforcard paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <p class="fontForHeader">MSBTE</p>
                   </div>
@@ -56,13 +55,13 @@ function OrganizationalStructure() {
                     </div>
                   </div>
                 </div>
-                <div class="card my-4  paddingAboutMsbte">
+                <div class="card my-4  paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <p class="fontForHeader"><b>Organization Chart</b></p>
                   </div>
                 </div>
 
-                <div class="card mb-2  borderforcard paddingAboutMsbte">
+                <div class="card mb-2  borderforcard paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <Link class="fontForHeader d-block" to="/">
                       Director
@@ -70,7 +69,7 @@ function OrganizationalStructure() {
                   </div>
                 </div>
 
-                <div class="card mb-2  borderforcard paddingAboutMsbte">
+                <div class="card mb-2  borderforcard paddingTopxl">
                   <div class="card-header backgroundColorCardHeader">
                     <p class="fontForHeader">Secretary</p>
                   </div>
@@ -159,7 +158,7 @@ function OrganizationalStructure() {
         </div>
       </div> */}
 
-      <div class="card mb-3  borderforcard paddingAboutMsbte">
+      <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">ORGANIZATIONAL STRUCTURE</p>
         </div>
@@ -210,7 +209,7 @@ function OrganizationalStructure() {
           </div>
         </div>
       </div>
-      <div class="card mb-3  borderforcard paddingAboutMsbte">
+      <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">FUNCTIONING OF MSBTE</p>
         </div>

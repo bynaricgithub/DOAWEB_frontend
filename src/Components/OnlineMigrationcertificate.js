@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import { Link } from "react-router-dom";
 
 function OnlineMigrationcertificate() {
   const [showModal, setShowModal] = useState(false);
@@ -10,7 +9,7 @@ function OnlineMigrationcertificate() {
   const handleShow = () => setShowModal(true);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte OnlineProceduret p-4">
+      <div className="card mb-3  borderforcard paddingTopxl OnlineProceduret p-4">
         <div className="card-headers">
           <h3>Online Procedure for Migration certificate</h3>
           <button className="back-btn">
@@ -25,7 +24,7 @@ function OnlineMigrationcertificate() {
           <a
             href="https://aaplesarkar.mahaonline.gov.in/en/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             www.aaplesarkar. mahaonline.gov.in
           </a>
@@ -36,7 +35,7 @@ function OnlineMigrationcertificate() {
           <a
             href="https://aaplesarkar.mahaonline.gov.in/en/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             www.aaplesarkar.mahaonline.gov.in
           </a>
@@ -110,7 +109,7 @@ function OnlineMigrationcertificate() {
           <a
             className="link-primary1 paddinfForClick"
             href="#"
-            aria-disabled="true" 
+            aria-disabled="true"
             onClick={() => {
               handleShow();
               setFile("/assets/file/migration.pdf");
