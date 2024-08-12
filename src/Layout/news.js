@@ -36,7 +36,7 @@ const News = () => {
     <>
       <div className="card border border-light shadow-0 mb-3">
         <div className="card-header backgroundColorCircular">
-          <h4> Notices & Announcements</h4>
+          <h4 className="text-uppercase"> Notices & Announcements</h4>
         </div>
         <div className="card-body overflow-auto heighttableDiv">
           <marquee
