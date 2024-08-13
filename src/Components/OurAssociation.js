@@ -3,7 +3,7 @@ import React from "react";
 function OurAssociation() {
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader ">
           <h1 className="fontForHeader">OUR ASSOCIATION</h1>
         </div>
@@ -173,9 +173,7 @@ function OurAssociation() {
                   <td>MIA</td>
                   <td>Marathwada Industries Association</td>
                   <td>
-                    <a href="/" target="_blank">
-                      
-                    </a>
+                    <a href="/" target="_blank"></a>
                   </td>
                 </tr>
                 <tr>

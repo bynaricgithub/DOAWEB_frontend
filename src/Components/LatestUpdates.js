@@ -1,5 +1,5 @@
+import { useContext, useEffect, useRef, useState } from "react";
 import API from "../API";
-import { useState, useEffect, useContext, useRef } from "react";
 import { ShowContext } from "../App";
 import ViewPDFModal from "./Modal/ViewPDFModal";
 
@@ -97,13 +97,10 @@ const LatestUpdates = () => {
                 ))}
               </marquee>
               <div className="d-flex">
-                <button
-                  className="btn btn-sm btn-warning"
-                  onClick={handlePause}
-                >
+                <button className="btn btn-sm" onClick={handlePause}>
                   <i className="news-scroll fa fa-pause"></i>
                 </button>
-                <button className="btn btn-sm btn-warning" onClick={handlePlay}>
+                <button className="btn btn-sm" onClick={handlePlay}>
                   <i className="news-scroll fa fa-play"></i>
                 </button>
               </div>

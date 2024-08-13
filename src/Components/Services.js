@@ -1,7 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import { Link } from "react-router-dom";
 
 function Services() {
   const [showModal, setShowModal] = useState(false);
@@ -10,7 +9,7 @@ function Services() {
   const handleShow = () => setShowModal(true);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">Services</h1>
         </div>

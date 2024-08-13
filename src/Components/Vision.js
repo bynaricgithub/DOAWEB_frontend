@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function Vision() {
@@ -12,7 +11,7 @@ function Vision() {
     <>
       <div className="row">
         <div className="col-lg-6 col-sm-6">
-          <div className="card mb-3  borderforcard paddingAboutMsbte">
+          <div className="card mb-3  borderforcard paddingTopxl">
             <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">VISION</h1>
             </div>
@@ -63,7 +62,7 @@ function Vision() {
         </div>
 
         <div className="col-lg-6 col-sm-6">
-          <div className="card mb-3  borderforcard paddingAboutMsbte">
+          <div className="card mb-3  borderforcard paddingTopxl">
             <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">MISSION</h1>
             </div>

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import API from "../API";
+import { ShowContext } from "../App";
 
 function GoverningBoard() {
   const { setShow, setMsg } = useContext(ShowContext);
@@ -11,7 +11,7 @@ function GoverningBoard() {
   }, []);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">GOVERNING BOARD</h1>
         </div>

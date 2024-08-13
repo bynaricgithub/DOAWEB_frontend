@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import API from "../API";
+import { ShowContext } from "../App";
 
 function GoverningCouncil() {
   const { setShow, setMsg } = useContext(ShowContext);
@@ -11,7 +11,7 @@ function GoverningCouncil() {
   }, []);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">GOVERNING COUNCIL</h1>
         </div>
@@ -21,8 +21,8 @@ function GoverningCouncil() {
             <div className="row">
               {list.slice(0, 2).map((item) => (
                 <div className="col-lg-6 col-sm-6 p-2">
-                  <div className="card RemoverBorderRadius">
-                    <div className="card-header backgroundColorCardHeaderGborad RemoverBorderRadius">
+                  <div className="card removerborderRadius">
+                    <div className="card-header backgroundColorCardHeaderGborad removerborderRadius">
                       <p className="fontForHeaderGboard">{item.post}</p>
                     </div>
                     <div className="card-body">
@@ -40,8 +40,8 @@ function GoverningCouncil() {
             <div className="row">
               {list.slice(2).map((item) => (
                 <div className="col-sm-12 p-2">
-                  <div className="card RemoverBorderRadius">
-                    <div className="card-header backgroundColorCardHeaderGborad RemoverBorderRadius">
+                  <div className="card removerborderRadius">
+                    <div className="card-header backgroundColorCardHeaderGborad removerborderRadius">
                       <p className="fontForHeaderGboard">{item.post}</p>
                     </div>
                     <div className="card-body">

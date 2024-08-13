@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function OnlineProceduretranscertificate() {
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte OnlineProceduret p-4">
+      <div className="card mb-3  borderforcard paddingTopxl OnlineProceduret p-4">
         <div className="card-headers">
           <h3>Online Procedure for Transcript Certificate</h3>
           <button className="back-btn">
@@ -19,7 +19,7 @@ function OnlineProceduretranscertificate() {
           <a
             href="https://aaplesarkar.mahaonline.gov.in/en/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             www.aaplesarkar. mahaonline.gov.in
           </a>
@@ -30,7 +30,7 @@ function OnlineProceduretranscertificate() {
           <a
             href="hhttps://aaplesarkar.mahaonline.gov.in/en/"
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
           >
             www.aaplesarkar.mahaonline.gov.in
           </a>
