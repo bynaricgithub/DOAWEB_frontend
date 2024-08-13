@@ -2,7 +2,7 @@ import React from "react";
 
 function Terms_and_Condition() {
   return (
-    <div className="card mb-3  borderforcard paddingAboutMsbte">
+    <div className="card mb-3  borderforcard paddingTopxl">
       <div className="card-header backgroundColorCardHeader">
         <h1 className="fontForHeader">TERMS AND CONDITION</h1>
       </div>

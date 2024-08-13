@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
 function CareerFair() {
@@ -91,7 +90,7 @@ function CareerFair() {
           </div>
         </div>
         <div className="col-sm-8">
-          <div className="card mb-3  borderforcard paddingAboutMsbte ">
+          <div className="card mb-3  borderforcard paddingTopxl ">
             <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">CAREER FAIR</h1>
             </div>

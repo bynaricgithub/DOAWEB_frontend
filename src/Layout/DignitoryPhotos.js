@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import API from "../API";
+import { ShowContext } from "../App";
 
 const DignitoryPhotos = () => {
   const { setShow, setMsg } = useContext(ShowContext);
@@ -16,8 +16,8 @@ const DignitoryPhotos = () => {
         {photos &&
           photos.map((photo, index) => {
             return (
-              <div className="col-lg-3 col-sm-3 col-6 mb-3" key={index}>
-                <div className="card Removerborder">
+              <div className="col-lg-2 col-sm-2 col-6 mb-3 mx-2 customewidth" key={index}>
+                <div className="card removerborder">
                   <img
                     className="img-fluid"
                     src={photo.img_path}

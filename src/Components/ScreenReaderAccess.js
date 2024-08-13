@@ -3,7 +3,7 @@ import React from "react";
 function ScreenReaderAccess() {
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">Screen Reader Access</h1>
         </div>

@@ -5,7 +5,7 @@ function Online_Activities() {
     <div>
       <div className="row  ">
         <div className="col-sm-12">
-          <div className="card RemoverBorderRadius">
+          <div className="card removerborderRadius">
             <div className="card-body">
               <h6 className="linktextcolor px-3 py-2">Online Activities</h6>
               <ul>

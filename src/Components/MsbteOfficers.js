@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import API from "../API";
+import { ShowContext } from "../App";
 
 function OfficerCard({ officer }) {
   return (
@@ -41,7 +41,7 @@ function MsbteOfficers() {
   }, []);
   return (
     <>
-      <div className="card mb-3  borderforcard paddingAboutMsbte">
+      <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
           <h1 className="fontForHeader">MSBTE OFFICERS</h1>
         </div>
@@ -76,7 +76,7 @@ function MsbteOfficers() {
             </div>
           </div>
         )} */}
-         <div className="table-responsive">
+        <div className="table-responsive">
           <table className="table table-bordered region-table">
             <thead className="thead-dark">
               <tr>
@@ -95,9 +95,12 @@ function MsbteOfficers() {
                       <td>{index + 1}</td>
                       <td>{item.name}</td>
                       <td>{item.post}</td>
-                      <td><a href={`tel:${item.phone}`}>{item.phone}</a></td>
-                      <td><a href={`mailto:${item.email}`}>{item.email}</a></td>
-
+                      <td>
+                        <a href={`tel:${item.phone}`}>{item.phone}</a>
+                      </td>
+                      <td>
+                        <a href={`mailto:${item.email}`}>{item.email}</a>
+                      </td>
                     </tr>
                   ))}
                 </>
@@ -105,7 +108,6 @@ function MsbteOfficers() {
             </tbody>
           </table>
         </div>
-
       </div>
     </>
   );

@@ -5,7 +5,7 @@ function OnrsStudents() {
     <>
       <div className="row ">
         <div className="col-sm-12">
-          <div className="card mb-3  borderforcard paddingAboutMsbte">
+          <div className="card mb-3  borderforcard paddingTopxl">
             <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">ONRS STUDENTS</h1>
             </div>

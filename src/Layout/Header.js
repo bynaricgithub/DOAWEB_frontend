@@ -1,12 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import LatestUpdates from "../Components/LatestUpdates";
-import TopMenu from "./TopMenu";
 import GoogleTranslator from "./GoogleTranslator";
+import TopMenu from "./TopMenu";
 
 function Header() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+
+  // Function to switch the theme and save it in localStorage
+  const switchTheme = (theme) => {  
+    if (theme === "default") {  
+      document.documentElement.className = "";  
+      localStorage.setItem("theme", "default");  
+    } else {  
+      document.documentElement.className = theme;  
+      localStorage.setItem("theme", theme);  
+    }  
+  };  
 
   const [fontSizeIncrement, setFontSizeIncrement] = useState(2); // You can set the initial increment value
 
@@ -48,6 +59,12 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Apply the saved theme from localStorage when the component mounts
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      switchTheme(savedTheme);
+    }
+
     // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -56,81 +73,10 @@ function Header() {
 
   return (
     <>
-      {/* <div className="d-flex justify-content-end translatorBar">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-9 col-lg-7 col-sm-5">
-              <a href="" target="_blank" className="text-white">
-               
-              </a>
-            </div>
-            <div className="col-xl-3 col-lg-5 col-sm-7">
-              <div className=" justify-content-end d-flex">
-                <div className="px-1">
-                  <Link to="/screen-reader-access">
-                    <img
-                      src="/assets/Images1/screenreader.png"
-                      alt="Screen Reader"
-                      className="screenReader"
-                    />
-                  </Link>
-                </div>
-                <div className="windowzoom">
-                  <div
-                    className="d-flex justify-content-end marginForDivConatiner"
-                    id="font-setting-buttons">
-                    <div>
-                      <img
-                        src="/assets/Images1/black.png"
-                        onClick="chngebackgroundblack()"
-                        alt="change header footer colour to black"
-                        className="img-fluid marginCircle FontForCircle"/>
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/pink.png"
-                        className="img-fluid marginCircle FontForCircle"
-                        onClick="chngebackgroundpink()"
-                        alt="chnage header footer colour to balck"/>
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/pluss.png"
-                        className="img-fluid zoom marginforzoom increase-me"
-                        alt="zoomin"
-                        id="zoomIn"
-                        onClick={() => resizeText(fontSizeIncrement)}
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/equal.png"
-                        className="img-fluid zoom-init marginforzoom reset-me"
-                        alt="zoomnormal"
-                        id="btnzoomNormal"
-                        onClick={resetFontSize}
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/minus.png"
-                        className="img-fluid zoom-out  marginforzoom decrease-me"
-                        alt="zoomout"
-                        id="zoomOut"
-                        onClick={() => resizeText(-fontSizeIncrement)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className="fixed-header">
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
+            <div className="col-xl-7 col-md-7 col-sm-12 logoImg">
               <a href="/" className="mt-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
@@ -138,93 +84,85 @@ function Header() {
                   alt="Logo"
                 />
                 <h3 className="notranslate">
-                  Maharashtra State Board<br/> of Art Education
+                  Maharashtra State Board
+                  <br /> of Art Education
                 </h3>
-              
               </a>
             </div>
-            <div className="col-xl-4 col-lg-6 col-sm-12">
+            <div className="col-xl-5 col-md-5 col-sm-12">
               <div className="row">
                 <div className="col-lg-5 col-sm-5 col-7 d-flex twologo logoImg3">
-                {/* <img
-                    src="/assets/Images1/image1.png"
-                    className=""
-                    alt="logo3"
-                  /> */}
                   <img
                     src="/assets/Images1/image.png"
                     className=""
                     alt="Logo"
                   />
-                 
                 </div>
                 <div className="col-lg-7 col-sm-7 col-5 removePaddingicons">
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
-                    <div className=" justify-content-end d-flex">
-                <div className="px-1">
-                  {/* <Link to="/screen-reader-access">
-                    <img
-                      src="/assets/Images1/screenreader.png"
-                      alt="Screen Reader"
-                      className="screenReader"
-                    />
-                  </Link> */}
-                </div>
-                <div className="windowzoom">
-                  <div
-                    className="d-flex justify-content-end marginForDivConatiner"
-                    id="font-setting-buttons">
-                    <div>
-                      <img
-                        src="/assets/Images1/black.png"
-                        onClick="chngebackgroundblack()"
-                        alt="change header footer colour to black"
-                        className="img-fluid marginCircle FontForCircle"/>
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/pink.png"
-                        className="img-fluid marginCircle FontForCircle"
-                        onClick="chngebackgroundpink()"
-                        alt="chnage header footer colour to balck"/>
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/pluss.png"
-                        className="img-fluid zoom marginforzoom increase-me"
-                        alt="zoomin"
-                        id="zoomIn"
-                        onClick={() => resizeText(fontSizeIncrement)}
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/equal.png"
-                        className="img-fluid zoom-init marginforzoom reset-me"
-                        alt="zoomnormal"
-                        id="btnzoomNormal"
-                        onClick={resetFontSize}
-                      />
-                    </div>
-                    <div>
-                      <img
-                        src="/assets/Images1/minus.png"
-                        className="img-fluid zoom-out  marginforzoom decrease-me"
-                        alt="zoomout"
-                        id="zoomOut"
-                        onClick={() => resizeText(-fontSizeIncrement)}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-                       {/* <GoogleTranslator /> */}
-                      <div className="search d-flex mt-2 m-hide"> 
-                        <div className="pt-1">
-                        <GoogleTranslator />
+                      <div className=" justify-content-end d-flex">
+                        <div className="px-1"></div>
+                        <div className="windowzoom">
+                          <div
+                            className="d-flex justify-content-end marginForDivConatiner"
+                            id="font-setting-buttons"
+                          >
+                            <div className="mx-2">
+                              <img
+                                src="/assets/Images1/black.png"
+                                onClick={() => switchTheme("dark-theme")}
+                                alt="themeBlack"
+                                className="img-fluid themeColor"
+                              />
+
+                              <img
+                                src="/assets/Images1/brown.png"
+                                className="img-fluid themeColor"
+                                onClick={() => switchTheme("light-theme")}
+                                alt="themelight"
+                              />
+                              <img
+                                src="/assets/Images1/blue.png"
+                                className="img-fluid themeColor"
+                                onClick={() => switchTheme("blue-theme")}
+                                alt="themered"
+                              />
+                            </div>
+
+                            <div>
+                              <img
+                                src="/assets/Images1/pluss.png"
+                                className="img-fluid zoom marginforzoom increase-me"
+                                alt="zoomin"
+                                id="zoomIn"
+                                onClick={() => resizeText(fontSizeIncrement)}
+                              />
+
+                              <img
+                                src="/assets/Images1/equal.png"
+                                className="img-fluid zoom-init marginforzoom reset-me"
+                                alt="zoomnormal"
+                                id="btnzoomNormal"
+                                onClick={resetFontSize}
+                              />
+
+                              <img
+                                src="/assets/Images1/minus.png"
+                                className="img-fluid zoom-out  marginforzoom decrease-me"
+                                alt="zoomout"
+                                id="zoomOut"
+                                onClick={() => resizeText(-fontSizeIncrement)}
+                              />
+                            </div>
+                          </div>
                         </div>
-                      
+                      </div>
+                      <div className="search d-flex mt-2 m-hide">
+                        <div className="pt-1">
+                          <GoogleTranslator />
+                        </div>
+
                         <input
                           type="text"
                           className="form-control"

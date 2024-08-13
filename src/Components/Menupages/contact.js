@@ -15,101 +15,50 @@ function Contact() {
       </div>
       <div className="row">
         <div className="col-sm-12">
-          <div className="card mb-3 borderforcard paddingAboutMsbte">
-            <div className="">
-              <div className="card-body removePadding row">
-                <div className="col-lg-6 col-sm-12">
-                <p className="colorcontact1 mx-3">
-                        Maharashtra State Board of Art Education
-                      </p>
-                  <div className="card directoreDesk ">
-                    <div className="card-header backgroundImpLink">
-                      <h4 className="text-center"> Contact Details</h4>
+          <div className="card my-3  p-3">
+            <div className="card-body row">
+              <div className="col-lg-5 col-sm-12">
+                <h6 className="colorcontact1">
+                  Maharashtra State Board of Art Education
+                </h6>
+                <ul className="contact py-3 text-dark font-16">
+                  <li>
+                    <i className="fa fa-university m-3"></i>
+                    <span className="mt-2 p-1">
+                      <b>Address :</b>
+                      <br />
+                      <span>
+                        Sir J. J. School of Art Campus Dr. D. N. Raod, Mumbai
+                        400 001.
+                      </span>
+                    </span>
+                  </li>
+                  <li>
+                    <i className="fa fa-envelope m-3"></i>
+                    <div className="mt-2 p-1">
+                      <b>Email : </b>
+                      <br />
+                      <a href="mailto: director.msbae@gmail.com">
+                        director.msbae@gmail.com
+                      </a>
+                      <br />
+                      <a href="mailto: directorateofart@gmail.com">
+                        directorateofart@gmail.com
+                      </a>
                     </div>
-                    <ul className="contact px-3 text-dark font-16">
-                     
-                      <li>
-                        <i className="fa fa-university m-3"></i>
-                        <span className="mt-2 p-1">
-                          <b>Address :</b>{" "}
-                          <span>
-                            Sir J. J. School of Art Campus Dr. D. N. Raod
-                            ,Mumbai 400 001.
-                          </span>
-                        </span>
-                      </li>
-                      <li>
-                        <i className="fa fa-envelope m-3"></i>
-                        <div className="mt-2 p-1 d-grid displayDiv">
-                          <span>
-                            <b>Email : </b>
-                            <a href="mailto: director.msbae@gmail.com">
-                              director.msbae@gmail.com
-                            </a>
-                          </span>
-                          <span className="mt-2 p-1 mx-5 hidepadding">
-                            <a
-                              href="mailto: directorateofart@gmail.com"
-                              className="mx-2"
-                            >
-                              directorateofart@gmail.com
-                            </a>
-                          </span>
-                        </div>
-                      </li>
-                    </ul>
-                    {/* <div className="d-flex">
-                      <span className="colorcontact1">Address</span>
-                      <span className="colorcontact1 paddingFornewSpan">:</span>
-                      <span className="colorcontact">
-                        <a
-                          className="phoneLinkColor"
-                          href="https://maps.app.goo.gl/Pz6dz1VfL2XjFdfS8"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Sir J. J. School of Art Campus
-                          Dr. D. N. Raod Mumbai 400 001.
-                        </a>
-                      </span>
-                    </div>
-                   
-                    <div className="d-flex">
-                      <span className="colorcontact1">Email</span>
-                      <span className="colorcontact1 paddingFornewSpan">:</span>
-                      <span className="colorcontact">
-                        <a
-                          className="phoneLinkColor"
-                          href="mailto:director.msbae@gmail.com"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          director.msbae@gmail.com
-                        </a>
-                      </span>
-                      <span className="colorcontact">
-                        <a
-                          className="phoneLinkColor"
-                          href="mailto: directorateofart@gmail.com"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                         directorateofart@gmail.com
-                        </a>
-                      </span>
-                    </div> */}
-                  </div>
-                </div>
-                <div className="col-lg-6 col-sm-12">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.7358760643942!2d72.83180877497388!3d18.943081582234324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d17ed3b5ee5f%3A0x74ce0f313f5d6e47!2sSir%20J.J%20Institute%20Of%20Applied%20Art!5e0!3m2!1sen!2sin!4v1723109392662!5m2!1sen!2sin"
-                    width="100%"
-                    height="350px"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-7 col-sm-12">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.7358760643942!2d72.83180877497388!3d18.943081582234324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d17ed3b5ee5f%3A0x74ce0f313f5d6e47!2sSir%20J.J%20Institute%20Of%20Applied%20Art!5e0!3m2!1sen!2sin!4v1723109392662!5m2!1sen!2sin"
+                  width="100%"
+                  height="400px"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  style={{ border: "1px solid", borderRadius: "6px" }}
+                ></iframe>
               </div>
             </div>
           </div>

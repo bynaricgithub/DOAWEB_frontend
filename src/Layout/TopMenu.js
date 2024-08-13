@@ -1,27 +1,26 @@
-import React, { useState, useEffect, useContext } from "react";
-import { ShowContext } from "../App";
+import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { useNavigate } from "react-router-dom";
-// import LogIn from "../Components/LogIn";
 import API from "../API";
+import { ShowContext } from "../App";
 
 function TopMenu() {
-  
   const [query, setQuery] = useState("");
-  
   const navigate = useNavigate();
-
   const { setShow, setMsg } = useContext(ShowContext);
   const [showModal, setShowModal] = useState(false);
   const [file, setFile] = useState("");
-  const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
   const [list, setList] = useState([]);
+
+  const handleClose = () => setShowModal(false);
+  const handleShow = (fileUrl) => {
+    setFile(fileUrl);
+    setShowModal(true);
+  };
 
   useEffect(() => {
     getMenu(setList, setShow, setMsg);
   }, []);
-  
 
   function MenuItem({ item, last, index }) {
     return item.children && item.children.length > 0 ? (
@@ -29,7 +28,7 @@ function TopMenu() {
         <a
           className="nav-link dropdown-toggle fontfornav navText"
           href="#"
-          aria-disabled="true" 
+          onClick={(e) => e.preventDefault()} // Prevent default behavior to stop page refresh
           id="navbarDropdown"
           role="button"
           data-bs-toggle="dropdown"
@@ -38,16 +37,15 @@ function TopMenu() {
           {item.title} {!last && <span className="marginLSpan">|</span>}
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          {item.children.map((rec , index) => (
+          {item.children.map((rec, index) => (
             <li key={index}>
               {rec.menu_url && rec.menu_url.includes(".pdf") ? (
                 <a
                   className="dropdown-item"
                   href="#"
-                  aria-disabled="true" 
-                  onClick={() => {
-                    handleShow();
-                    setFile(rec.menu_url);
+                  onClick={(e) => {
+                    e.preventDefault(); // Prevent default behavior to stop page refresh
+                    handleShow(rec.menu_url);
                   }}
                 >
                   {rec.title}
@@ -63,12 +61,13 @@ function TopMenu() {
                       ? "_blank"
                       : "_self"
                   }
+                  onClick={(e) => rec.menu_url === "#" && e.preventDefault()} // Prevent default if the URL is "#"
                 >
                   {rec.title}
                 </a>
               )}
               {rec.children && rec.children.length > 0 && (
-                <ul className="submenu dropdown-menu ">
+                <ul className="submenu dropdown-menu">
                   {rec.children.map((i, index) => (
                     <li key={index}>
                       <a
@@ -81,6 +80,9 @@ function TopMenu() {
                             ? "_blank"
                             : "_self"
                         }
+                        onClick={(e) =>
+                          i.menu_url === "#" && e.preventDefault()
+                        } // Prevent default if the URL is "#"
                       >
                         {i.title}
                       </a>
@@ -93,15 +95,14 @@ function TopMenu() {
         </ul>
       </li>
     ) : (
-      <li className="nav-item">
+      <li className="nav-item" key={index}>
         {item.menu_url && item.menu_url.includes(".pdf") ? (
           <a
             className="nav-link fontfornav navText"
             href="#"
-            aria-disabled="true" 
-            onClick={() => {
-              handleShow();
-              setFile(item.menu_url);
+            onClick={(e) => {
+              e.preventDefault(); // Prevent default behavior to stop page refresh
+              handleShow(item.menu_url);
             }}
           >
             {item.title} {!last && <span className="marginLSpan">|</span>}
@@ -117,6 +118,7 @@ function TopMenu() {
                 ? "_blank"
                 : "_self"
             }
+            onClick={(e) => item.menu_url === "#" && e.preventDefault()} // Prevent default if the URL is "#"
           >
             {item.title} {!last && <span className="marginLSpan">|</span>}
           </a>
@@ -137,10 +139,8 @@ function TopMenu() {
             <input
               type="text"
               className="form-control"
-              placeholder="Serach..."
-              onChange={(e) => {
-                setQuery(e.target.value);
-              }}
+              placeholder="Search..."
+              onChange={(e) => setQuery(e.target.value)}
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
                   navigate(`/search?query=${query}`);
@@ -148,7 +148,7 @@ function TopMenu() {
               }}
             />
             <i
-              className="fa fa-search fa-flip-horizontal serachbarbackground "
+              className="fa fa-search fa-flip-horizontal searchbarbackground"
               aria-hidden="true"
               onClick={() => {
                 navigate(`/search?query=${query}`);
@@ -174,9 +174,12 @@ function TopMenu() {
               {list &&
                 list.length > 0 &&
                 list.map((item, index) => (
-                  <MenuItem item={item} last={index === list.length} key={index} />
+                  <MenuItem
+                    item={item}
+                    last={index === list.length - 1} // Fixes last item check
+                    key={index}
+                  />
                 ))}
-              
               <div
                 className="navbar-toggler close custom-close"
                 type="button"
@@ -191,30 +194,19 @@ function TopMenu() {
           </div>
         </div>
       </nav>
-      {/* <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-        </Modal.Header>
-        <Modal.Body closeButton>
-          <LogIn />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
       <Modal
         show={showModal}
         onHide={handleClose}
         centered
         contentClassName="modal-pdf-content"
       >
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body closeButton>
-          <iframe title="myFrame" className="w-100 h-100" src={file}></iframe>
+        <Modal.Header closeButton />
+        <Modal.Body>
+          <iframe
+            title="PDF Viewer"
+            className="w-100 h-100"
+            src={file}
+          ></iframe>
         </Modal.Body>
       </Modal>
     </>
@@ -232,7 +224,7 @@ function getMenu(setList, setShow, setMsg) {
               ...child,
               children: arrayToTree(arr, child.id),
             }));
-        let list = arrayToTree(res.data.data, 0);
+        const list = arrayToTree(res.data.data, 0);
         setList(list);
       }
     })

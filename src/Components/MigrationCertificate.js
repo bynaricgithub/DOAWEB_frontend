@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,7 @@ function MigrationCertificate() {
     <>
       <div className="row ">
         <div className="col-sm-12">
-          <div className="card RemoverBorderRadius">
+          <div className="card removerborderRadius">
             <div className="card-body">
               <p className="linktextcolor">
                 IMPORTANT NOTE FOR STUDENTS OF AUTONOMOUS INSTITUTE:
@@ -46,7 +45,7 @@ function MigrationCertificate() {
                 <a
                   className="link-primary1 paddinfForClick"
                   href="#"
-                  aria-disabled="true" 
+                  aria-disabled="true"
                   onClick={() => {
                     handleShow();
                     setFile("/assets/file/ReapplyProcedure_060720221145.pdf");
