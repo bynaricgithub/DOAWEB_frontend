@@ -1622,7 +1622,7 @@ img.goog-te-gadget-icon {
 
 .removerborder img {
   border-radius: 50%;
-  height: 95px;
+  height: 110px;
   background: var(--text-color-secondary);
   border: 0;
   width: 110px;
@@ -4232,7 +4232,12 @@ img.goog-te-gadget-icon {
     max-height: 120px;
   }
 }
-
+@media (min-width: 992px) {
+  .col-lg-2 {
+      flex: 0 0 auto;
+      width: 20% !important;
+  }
+}
 @media (max-width: 1920px) {
   .container,
   .container-lg,
@@ -4241,5 +4246,8 @@ img.goog-te-gadget-icon {
   .container-xl,
   .container-xxl {
     max-width: 1600px;
+  }
+  .customewidth{
+    width: 20% !important;
   }
 }

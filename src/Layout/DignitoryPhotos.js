@@ -16,7 +16,7 @@ const DignitoryPhotos = () => {
         {photos &&
           photos.map((photo, index) => {
             return (
-              <div className="col-lg-2 col-sm-2 col-6 mb-3 mx-2" key={index}>
+              <div className="col-lg-2 col-sm-2 col-6 mb-3 mx-2 customewidth" key={index}>
                 <div className="card removerborder">
                   <img
                     className="img-fluid"
