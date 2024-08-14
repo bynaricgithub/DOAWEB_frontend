@@ -91,14 +91,14 @@ function Header() {
             </div>
             <div className="col-xl-5 col-md-5 col-sm-12">
               <div className="row">
-                <div className="col-lg-5 col-sm-5 col-7 d-flex twologo logoImg3">
+                <div className="col-lg-5 col-sm-5 col-2 d-flex twologo logoImg3">
                   <img
                     src="/assets/Images1/image.png"
                     className=""
                     alt="Logo"
                   />
                 </div>
-                <div className="col-lg-7 col-sm-7 col-5 removePaddingicons">
+                <div className="col-lg-7 col-sm-7 col-10 removePaddingicons">
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
                       <div className=" justify-content-end d-flex">
