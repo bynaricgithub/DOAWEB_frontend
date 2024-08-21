@@ -33,7 +33,7 @@ function Main() {
 
                   <div className="row g-0">
                     <div className="col-lg-4 col-sm-5">
-                      <div className="card removerborder marginFont">
+                      <div className="card removerborder my-2">
                         <img
                           className="img-fluid"
                           src="/assets/Images1/person.jpg"
@@ -53,7 +53,7 @@ function Main() {
                       <div className="card-body p-2">
                         <p className="fontForDesk" id="fontfordirectordesk">
                           <ReactReadMoreReadLess
-                            charLimit={460}
+                            charLimit={300}
                             readMoreText={"Read more ▼"}
                             readLessText={"Read less ▲"}
                             readMoreClassName="read-more-less--more"

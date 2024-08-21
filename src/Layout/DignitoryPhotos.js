@@ -12,11 +12,11 @@ const DignitoryPhotos = () => {
 
   return (
     <>
-      <div className="row ImagesPoliticians">
+      <div className="ImagesPoliticians">
         {photos &&
           photos.map((photo, index) => {
             return (
-              <div className="col-lg-2 col-sm-2 col-6 mb-3 customewidth" key={index}>
+              <div className="mb-3 customewidth" key={index}>
                 <div className="card removerborder">
                   <img
                     className="img-fluid"

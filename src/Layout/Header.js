@@ -9,15 +9,15 @@ function Header() {
   const navigate = useNavigate();
 
   // Function to switch the theme and save it in localStorage
-  const switchTheme = (theme) => {  
-    if (theme === "default") {  
-      document.documentElement.className = "";  
-      localStorage.setItem("theme", "default");  
-    } else {  
-      document.documentElement.className = theme;  
-      localStorage.setItem("theme", theme);  
-    }  
-  };  
+  const switchTheme = (theme) => {
+    if (theme === "default") {
+      document.documentElement.className = "";
+      localStorage.setItem("theme", "default");
+    } else {
+      document.documentElement.className = theme;
+      localStorage.setItem("theme", theme);
+    }
+  };
 
   const [fontSizeIncrement, setFontSizeIncrement] = useState(2); // You can set the initial increment value
 
@@ -76,7 +76,7 @@ function Header() {
       <div className="fixed-header">
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <div className="col-xl-7 col-md-7 col-sm-12 logoImg">
+            <div className="col-xl-7 col-lg-6 col-md-7 col-sm-12 logoImg">
               <a href="/" className="mt-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
@@ -84,21 +84,22 @@ function Header() {
                   alt="Logo"
                 />
                 <h3 className="notranslate">
-                  Maharashtra State Board
-                  <br /> of Art Education
+                  Maharashtra State Board of Art Education
+                  <br />
+                  <small>महाराष्ट्र राज्य कला शिक्षण मंडळ</small>
                 </h3>
               </a>
             </div>
-            <div className="col-xl-5 col-md-5 col-sm-12">
+            <div className="col-xl-5 col-lg-6 col-md-5 col-sm-12">
               <div className="row">
-                <div className="col-lg-5 col-sm-5 col-2 d-flex twologo logoImg3">
+                <div className="col-lg-3 col-sm-3 col-3 d-flex twologo logoImg3">
                   <img
                     src="/assets/Images1/image.png"
-                    className=""
+                    className="mx-auto"
                     alt="Logo"
                   />
                 </div>
-                <div className="col-lg-7 col-sm-7 col-10 removePaddingicons">
+                <div className="col-lg-9 col-sm-9 col-9">
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
                       <div className=" justify-content-end d-flex">
