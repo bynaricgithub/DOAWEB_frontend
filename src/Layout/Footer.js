@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useEffect, useState } from "react";
 import { ShowContext } from "../App";
 
@@ -5,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Moment from "react-moment";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import API from "../API";
 
 function Footer() {
@@ -248,26 +249,25 @@ function Footer() {
 					<div className="row">
 						<ul className="">
 							<li>
-								<a href="/">Home</a>
+								<Link to="/">Home</Link>
 							</li>
 							<li>
-								<a href="/about">About Us</a>
+								<Link to="/about">About Us</Link>
 							</li>
 							<li>
-								<a href="/institute">Institutes</a>
+								<Link to="/institute">Institutes</Link>
 							</li>
 							<li>
-								<a href="/admission">Admission</a>
+								<Link to="/admission">Admission</Link>
 							</li>
 							<li>
-								<a href="/examination">Examination</a>
+								<Link to="/examination">Examination</Link>
 							</li>
 							<li>
-								<a href="/contact">Contact Us</a>
+								<Link to="/contact">Contact Us</Link>
 							</li>
-
 							<li>
-								<a href="/sitemap">Sitemap</a>
+								<Link to="/sitemap">Sitemap</Link>
 							</li>
 						</ul>
 					</div>
@@ -409,11 +409,7 @@ function Footer() {
 					<div className="bottom-text pt-2 pb-3">
 						<span className="text-left footertext">
 							Last updated on :&nbsp;
-							{lastUpdatedDate ? (
-								<Moment format="DD/MM/YY, hh:mm A">{lastUpdatedDate}</Moment>
-							) : (
-								""
-							)}
+							{lastUpdatedDate ? (<Moment format="DD/MM/YY, hh:mm A">{lastUpdatedDate}</Moment>) : ("")}
 							{/* &nbsp; | &nbsp; Powered by &nbsp;
               <a
                 href="https://web.bynaric.in/"
