@@ -25,6 +25,10 @@ function Footer() {
 	const [file, setFile] = useState("");
 	const handleClose = () => setShowModal(false);
 	const handleShow = () => setShowModal(true);
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
 	return (
 		<>
 			<div
@@ -249,25 +253,25 @@ function Footer() {
 					<div className="row">
 						<ul className="">
 							<li>
-								<Link to="/">Home</Link>
+								<Link onClick={scrollToTop} to="/">Home</Link>
 							</li>
 							<li>
-								<Link to="/about">About Us</Link>
+								<Link onClick={scrollToTop} to="/about">About Us</Link>
 							</li>
 							<li>
-								<Link to="/institute">Institutes</Link>
+								<Link onClick={scrollToTop} to="/institute">Institutes</Link>
 							</li>
 							<li>
-								<Link to="/admission">Admission</Link>
+								<Link onClick={scrollToTop} to="/admission">Admission</Link>
 							</li>
 							<li>
-								<Link to="/examination">Examination</Link>
+								<Link onClick={scrollToTop} to="/examination">Examination</Link>
 							</li>
 							<li>
-								<Link to="/contact">Contact Us</Link>
+								<Link onClick={scrollToTop} to="/contact">Contact Us</Link>
 							</li>
 							<li>
-								<Link to="/sitemap">Sitemap</Link>
+								<Link onClick={scrollToTop} to="/sitemap">Sitemap</Link>
 							</li>
 						</ul>
 					</div>
