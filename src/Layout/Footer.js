@@ -248,40 +248,26 @@ function Footer() {
           <div className="row">
             <ul className="">
               <li>
-                <a href="/" target="_blank ">
-                  Home
-                </a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="/about" target="_blank ">
-                  About
-                </a>
+                <a href="/about">About Us</a>
               </li>
               <li>
-                <a href="/institute" target="_blank ">
-                  Institutes
-                </a>
+                <a href="/institute">Institutes</a>
               </li>
               <li>
-                <a href="/admission" target="_blank ">
-                  Admission
-                </a>
+                <a href="/admission">Admission</a>
               </li>
               <li>
-                <a href="/examination" target="_blank ">
-                  Examination
-                </a>
+                <a href="/examination">Examination</a>
               </li>
               <li>
-                <a href="/contact" target="_blank ">
-                  Contact
-                </a>
+                <a href="/contact">Contact</a>
               </li>
 
               <li>
-                <a href="/sitemap" target="_blank ">
-                  SiteMap
-                </a>
+                <a href="/sitemap">Sitemap</a>
               </li>
             </ul>
           </div>

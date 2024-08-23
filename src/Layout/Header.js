@@ -76,7 +76,7 @@ function Header() {
       <div className="fixed-header">
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <div className="col-xl-7 col-lg-6 col-md-7 col-sm-12 logoImg">
+            <div className="col-xl-7 col-lg-6 col-sm-12 logoImg">
               <a href="/" className="mt-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
@@ -90,7 +90,7 @@ function Header() {
                 </h3>
               </a>
             </div>
-            <div className="col-xl-5 col-lg-6 col-md-5 col-sm-12">
+            <div className="col-xl-5 col-lg-6 col-sm-12 d-xs-none">
               <div className="row">
                 <div className="col-lg-3 col-sm-3 col-3 d-flex twologo logoImg3">
                   <img
@@ -103,7 +103,6 @@ function Header() {
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
                       <div className=" justify-content-end d-flex">
-                        <div className="px-1"></div>
                         <div className="windowzoom">
                           <div
                             className="d-flex justify-content-end marginForDivConatiner"
