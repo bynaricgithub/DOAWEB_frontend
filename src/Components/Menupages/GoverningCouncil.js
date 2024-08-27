@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import API from "../API";
-import { ShowContext } from "../App";
+import API from "../../API";
+import { ShowContext } from "../../App";
 
 function GoverningCouncil() {
   const { setShow, setMsg } = useContext(ShowContext);

@@ -167,40 +167,50 @@ function OrganizationalStructure() {
             <div className="row">
               <div className="col-xl-12 col-sm-12 text-center py-3">
                 <img
-                  src="/assets/Images1/ORG_Chart.png"
+                  src="/assets/Images1/ORG_Chart.jpg"
                   className="p-0 img-fluid"
                   alt="Org Chart"
                   useMap="#org_chart"
                 />
                 <map name="org_chart">
                   <area
+                    target="_blank"
+                    alt="Governing Council"
+                    title="Governing Council"
                     href="/governingCouncil"
-                    coords="479,163,67"
+                    coords="480,164,63"
                     shape="circle"
                   />
                   <area
+                    target="_blank"
+                    alt="Governing Board"
+                    title="Governing Board"
                     href="/governingBoard"
-                    coords="481,265,481,266,541,309,518,378,444,379,420,304,481,265"
+                    coords="482,260,421,304,444,375,516,373,538,305,482,262,420,304"
                     shape="poly"
                   />
                   <area
+                    target="_blank"
+                    alt="MSBAE Mumbai"
+                    title="MSBAE Mumbai"
                     href="/mumbai_region"
-                    coords="241,627,34,545"
+                    coords="61,544,304,622"
                     shape="rect"
                   />
                   <area
-                    href="/pune_region"
-                    coords="266,544,468,623"
-                    shape="rect"
-                  />
-                  <area
-                    href="/chatrapati_shambhaji_nagar_region"
-                    coords="493,545,697,623"
-                    shape="rect"
-                  />
-                  <area
+                    target="_blank"
+                    alt="MSBAE nagpur"
+                    title="MSBAE nagpur"
                     href="/nagpur_region"
-                    coords="720,543,922,623"
+                    coords="361,544,596,620"
+                    shape="rect"
+                  />
+                  <area
+                    target="_blank"
+                    alt="MSBAE Chatrapati Sambhaji NAgar"
+                    title="MSBAE Chatrapati Sambhaji NAgar"
+                    href="/chatrapati_shambhaji_nagar_region"
+                    coords="652,545,903,623"
                     shape="rect"
                   />
                 </map>
@@ -209,7 +219,7 @@ function OrganizationalStructure() {
           </div>
         </div>
       </div>
-      <div class="card mb-3  borderforcard paddingTopxl">
+      {/* <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">FUNCTIONING OF MSBTE</p>
         </div>
@@ -251,7 +261,7 @@ function OrganizationalStructure() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

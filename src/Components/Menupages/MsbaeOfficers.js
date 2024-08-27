@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import API from "../API";
-import { ShowContext } from "../App";
+import API from "../../API";
+import { ShowContext } from "../../App";
 
-function GoverningBoard() {
+function MsbaeOfficers() {
   const { setShow, setMsg } = useContext(ShowContext);
   const [list, setList] = useState();
 
@@ -13,30 +13,8 @@ function GoverningBoard() {
     <>
       <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
-          <h1 className="fontForHeader">GOVERNING BOARD</h1>
+          <h1 className="fontForHeader">MSBAE Officers</h1>
         </div>
-
-        {/* {list && list.length > 0 && (
-          <div className="row g-0">
-            <div className="card-body">
-              <div className="row  p-2">
-                {list.map((item) => (
-                  <div className="col-sm-12 p-2">
-                    <div className="card">
-                      <div className="card-header backgroundColorCardHeaderGborad">
-                        <p className="fontForHeaderGboard">{item.post}</p>
-                      </div>
-                      <div className="card-body">
-                        <p className="fontForHeaderText">{item.name}</p>
-                        <p className="card-text">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )} */}
 
         <div className="table-responsive">
           <table className="table table-bordered region-table">
@@ -72,7 +50,7 @@ function GoverningBoard() {
 }
 
 function getOfficers(setList, setShow, setMsg) {
-  API.get("boards")
+  API.get("Officers")
     .then((res) => {
       if (res.data.status === "success") {
         setList(res.data.data);
@@ -84,4 +62,4 @@ function getOfficers(setList, setShow, setMsg) {
     });
 }
 
-export default GoverningBoard;
+export default MsbaeOfficers;

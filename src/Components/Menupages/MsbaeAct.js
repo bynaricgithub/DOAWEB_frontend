@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
-function MsbteAct() {
+function MsbaeAct() {
   const [showModal, setShowModal] = useState(false);
   const [file, setFile] = useState("");
   const handleClose = () => setShowModal(false);
@@ -10,7 +10,7 @@ function MsbteAct() {
     <>
       <div className="card mb-3  borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader">
-          <h1 className="fontForHeader">MSBTE ACT</h1>
+          <h1 className="fontForHeader">MSBAE ACT</h1>
         </div>
         <div className="card-body removePadding">
           <div className="row p-2">
@@ -84,4 +84,4 @@ function MsbteAct() {
   );
 }
 
-export default MsbteAct;
+export default MsbaeAct;

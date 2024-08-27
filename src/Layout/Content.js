@@ -1,6 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Admin from "../Components/Admin";
+import GoverningBoard from "../Components/Menupages/GoverningBoard";
+import GoverningCouncil from "../Components/Menupages/GoverningCouncil";
+import MsbaeAct from "../Components/Menupages/MsbaeAct";
+import MsbaeOfficers from "../Components/Menupages/MsbaeOfficers";
+import OrganizationalStructure from "../Components/Menupages/OrganizationalStructure";
+import Vision from "../Components/Menupages/Vision";
 import About from "../Components/Menupages/about";
 import Admission from "../Components/Menupages/admission";
 import Affilation from "../Components/Menupages/affilation";
@@ -32,6 +38,15 @@ function Content() {
             <Route path="/examination" element={<Examination />} />
             <Route path="/admission" element={<Admission />} />
             <Route path="/sitemap" element={<SiteMap />} />
+            <Route path="/vision" element={<Vision />} />
+            <Route
+              path="/organizationalStructure"
+              element={<OrganizationalStructure />}
+            />
+            <Route path="/governingCouncil" element={<GoverningCouncil />} />
+            <Route path="/governingBoard" element={<GoverningBoard />} />
+            <Route path="/msbaeOfficers" element={<MsbaeOfficers />} />
+            <Route path="/msbaeAct" element={<MsbaeAct />} />
 
             <Route element={<WithoutNav />}>
               <Route path="/admin" element={<Admin />} />
