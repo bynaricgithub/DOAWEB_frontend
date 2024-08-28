@@ -21,7 +21,7 @@ function Affilation() {
             </div> */}
             <a
               href="https://doaonline.in/institute-login"
-              className="links text-center p-2"
+              className="links text-center p-2 mt-2"
             >
               Click here for affilation registration form
             </a>

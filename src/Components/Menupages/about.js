@@ -15,7 +15,7 @@ function About() {
           </Row>
         </Container>
       </div>
-      <div className="row px-5">
+      <div className="row">
         <div className="col-sm-12">
           <div className="card mb-3 borderforcard paddingTopxl">
             <div className="card-body px-4 row">
@@ -54,6 +54,23 @@ function About() {
                   and declaration of results and award of certificates in a
                   transparent and fair manner.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-12">
+          <div className="card mb-3 borderforcard paddingTopxl">
+            <div className="row g-0">
+              <div className="card-body removePadding row">
+                <div className="col-lg-12 col-sm-12">
+                  <div className="pdfDiv">
+                    <iframe
+                      src={"/assets/file/GazetteSearch.pdf"}
+                      style={{ width: "100%", height: "100%" }}
+                      title="PDF"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

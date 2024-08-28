@@ -17,25 +17,6 @@ function MsbaeAct() {
             {/* <p>
               <a
                 className="link-primary"
-                // data-bs-toggle="modal"
-                // data-bs-target="#msbteactpdf"
-                href="#"
-                aria-disabled="true" 
-                onClick={() => {
-                  handleShow();
-                  setFile("/assets/file/maharshtra_act.pdf");
-                }}
-              >
-                Download MSBTE Act as a PDF file. (English)(64 kb)
-                <img src="/assets/Images1/pdf.png" alt="pdf" />
-              </a>
-            </p>
-             */}
-            <p>
-              <a
-                className="link-primary"
-                // data-bs-toggle="modal"
-                // data-bs-target="#msbteactpdf"
                 href="#"
                 aria-disabled="true"
                 onClick={() => {
@@ -52,8 +33,6 @@ function MsbaeAct() {
             <p>
               <a
                 className="link-primary"
-                // data-bs-toggle="modal"
-                // data-bs-target="#msbteactpdf"
                 href="#"
                 aria-disabled="true"
                 onClick={() => {
@@ -65,7 +44,7 @@ function MsbaeAct() {
                 2023 (Mah. Act No. XXII of 2023). (English)(199 kb)
                 <img src="/assets/Images1/pdf.png" alt="pdf" />
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

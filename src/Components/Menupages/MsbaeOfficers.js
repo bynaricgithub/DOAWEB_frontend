@@ -22,7 +22,7 @@ function MsbaeOfficers() {
               <tr>
                 <th>Sr. No.</th>
                 <th>Name</th>
-                <th>Description</th>
+                {/* <th>Description</th> */}
                 <th>Post</th>
               </tr>
             </thead>
@@ -34,7 +34,7 @@ function MsbaeOfficers() {
                       <td>{index + 1}</td>
 
                       <td>{item.name}</td>
-                      <td>{item.description}</td>
+                      {/* <td>{item.description}</td> */}
 
                       <td>{item.post}</td>
                     </tr>

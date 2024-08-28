@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Admin from "../Components/Admin";
+import Committees from "../Components/Menupages/Committee";
 import GoverningBoard from "../Components/Menupages/GoverningBoard";
 import GoverningCouncil from "../Components/Menupages/GoverningCouncil";
 import MsbaeAct from "../Components/Menupages/MsbaeAct";
@@ -47,6 +48,7 @@ function Content() {
             <Route path="/governingBoard" element={<GoverningBoard />} />
             <Route path="/msbaeOfficers" element={<MsbaeOfficers />} />
             <Route path="/msbaeAct" element={<MsbaeAct />} />
+            <Route path="/committees" element={<Committees />} />
 
             <Route element={<WithoutNav />}>
               <Route path="/admin" element={<Admin />} />

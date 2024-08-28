@@ -19,7 +19,10 @@ function Examination() {
             {/* <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">Affilation</h1>
             </div> */}
-            <a href="https://dge.msbae.in/" className="links text-center p-2">
+            <a
+              href="https://dge.msbae.in/"
+              className="links text-center p-2 mt-2"
+            >
               Click here for center registration and student registration
             </a>
             <div className="row g-0">
