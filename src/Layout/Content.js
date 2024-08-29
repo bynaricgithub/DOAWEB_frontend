@@ -28,7 +28,7 @@ function Content() {
         className="post"
         // style={{ backgroundImage: "url(/assets/Images1/Campus_1.png)" }}
       >
-        <div className="container" id="paddingForContainer">
+        <div className="container">
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />

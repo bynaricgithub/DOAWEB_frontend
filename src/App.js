@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import Header from "./Layout/Header";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import API from "./API";
 import Content from "./Layout/Content";
 import Footer from "./Layout/Footer";
-import API from "./API";
-import { useNavigate } from "react-router-dom";
+import Header from "./Layout/Header";
 
 export const ShowContext = React.createContext();
 

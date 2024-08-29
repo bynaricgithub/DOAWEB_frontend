@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LatestUpdates from "../Components/LatestUpdates";
-import GoogleTranslator from "./GoogleTranslator";
+import TopControl from "./TopControl";
 import TopMenu from "./TopMenu";
 
 function Header() {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+  const headerRef = useRef(null);
 
-  // Function to switch the theme and save it in localStorage
   const switchTheme = (theme) => {
     if (theme === "default") {
       document.documentElement.className = "";
@@ -18,33 +18,6 @@ function Header() {
       localStorage.setItem("theme", theme);
     }
   };
-
-  const [fontSizeIncrement, setFontSizeIncrement] = useState(2); // You can set the initial increment value
-
-  const resizeText = (increment) => {
-    const elements = document.querySelectorAll(
-      "h1, h2, h3, h4, h5, h6, p, span, font, li, a, b, th, td, button i"
-    );
-
-    elements.forEach((element) => {
-      let elementFontSize = parseFloat(
-        window.getComputedStyle(element).fontSize
-      );
-      element.style.fontSize = elementFontSize + increment + "px";
-    });
-  };
-
-  const resetFontSize = () => {
-    const elements = document.querySelectorAll(
-      "h1, h2, h3, h4, h5, h6, p, span, font, li, a, b, th, td, button i"
-    );
-
-    elements.forEach((element) => {
-      element.style.fontSize = "";
-    });
-  };
-
-  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +38,6 @@ function Header() {
       switchTheme(savedTheme);
     }
 
-    // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -73,10 +45,14 @@ function Header() {
 
   return (
     <>
+      <div id="headerfix" ref={headerRef}>
+        <TopControl switchTheme={switchTheme} />
+      </div>
+
       <div className="fixed-header">
         <div className="container">
           <div className="row d-flex justify-content-center">
-            <div className="col-xl-7 col-lg-6 col-sm-12 logoImg">
+            <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
               <a href="/" className="mt-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
@@ -90,86 +66,24 @@ function Header() {
                 </h3>
               </a>
             </div>
-            <div className="col-xl-5 col-lg-6 col-sm-12 d-xs-none">
+            <div className="col-xl-4 col-lg-6 col-sm-12 d-xs-none">
               <div className="row">
-                <div className="col-lg-3 col-sm-3 col-3 d-flex twologo logoImg3">
+                <div className="col-lg-4 col-sm-4 col-4 d-flex twologo logoImg3">
                   <img
                     src="/assets/Images1/image.png"
                     className="mx-auto"
                     alt="Logo"
                   />
                 </div>
-                <div className="col-lg-9 col-sm-9 col-9">
+                <div className="col-lg-8 col-sm-8 col-8">
                   <div className="lastDiv">
                     <div className="pt-3 pb-2 Positionlanguage">
-                      <div className=" justify-content-end d-flex">
-                        <div className="windowzoom">
-                          <div
-                            className="d-flex justify-content-end marginForDivConatiner"
-                            id="font-setting-buttons"
-                          >
-                            <div className="mx-2">
-                              <img
-                                src="/assets/Images1/black.png"
-                                onClick={() => switchTheme("dark-theme")}
-                                alt="themeBlack"
-                                className="img-fluid themeColor"
-                              />
-
-                              <img
-                                src="/assets/Images1/brown.png"
-                                className="img-fluid themeColor"
-                                onClick={() => switchTheme("light-theme")}
-                                alt="themelight"
-                              />
-                              <img
-                                src="/assets/Images1/blue.png"
-                                className="img-fluid themeColor"
-                                onClick={() => switchTheme("blue-theme")}
-                                alt="themered"
-                              />
-                            </div>
-
-                            <div>
-                              <img
-                                src="/assets/Images1/pluss.png"
-                                className="img-fluid zoom marginforzoom increase-me"
-                                alt="zoomin"
-                                id="zoomIn"
-                                onClick={() => resizeText(fontSizeIncrement)}
-                              />
-
-                              <img
-                                src="/assets/Images1/equal.png"
-                                className="img-fluid zoom-init marginforzoom reset-me"
-                                alt="zoomnormal"
-                                id="btnzoomNormal"
-                                onClick={resetFontSize}
-                              />
-
-                              <img
-                                src="/assets/Images1/minus.png"
-                                className="img-fluid zoom-out  marginforzoom decrease-me"
-                                alt="zoomout"
-                                id="zoomOut"
-                                onClick={() => resizeText(-fontSizeIncrement)}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div className="search d-flex mt-2 m-hide">
-                        <div className="pt-1">
-                          <GoogleTranslator />
-                        </div>
-
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Serach..."
-                          onChange={(e) => {
-                            setQuery(e.target.value);
-                          }}
+                          placeholder="Search..."
+                          onChange={(e) => setQuery(e.target.value)}
                           onKeyPress={(event) => {
                             if (event.key === "Enter") {
                               navigate(`/search?query=${query}`);
@@ -177,11 +91,9 @@ function Header() {
                           }}
                         />
                         <i
-                          className="fa fa-search fa-flip-horizontal serachbarbackground "
+                          className="fa fa-search fa-flip-horizontal serachbarbackground"
                           aria-hidden="true"
-                          onClick={() => {
-                            navigate(`/search?query=${query}`);
-                          }}
+                          onClick={() => navigate(`/search?query=${query}`)}
                         ></i>
                       </div>
                       <div className="social-media d-flex paddingSocialMedia">
@@ -195,7 +107,7 @@ function Header() {
                               <img
                                 src="/assets/Images1/facebbok.png"
                                 className="rounded-circle"
-                                alt="socialM"
+                                alt="Facebook"
                               />
                             </a>
                           </li>
@@ -208,7 +120,7 @@ function Header() {
                               <img
                                 src="/assets/Images1/twiter.png"
                                 className="rounded-circle"
-                                alt="socialM"
+                                alt="Twitter"
                               />
                             </a>
                           </li>
@@ -221,7 +133,7 @@ function Header() {
                               <img
                                 src="/assets/Images1/insta.png"
                                 className="rounded-circle"
-                                alt="socialM"
+                                alt="Instagram"
                               />
                             </a>
                           </li>
@@ -234,7 +146,7 @@ function Header() {
                               <img
                                 src="/assets/Images1/Ytube.png"
                                 className="rounded-circle"
-                                alt="socialM"
+                                alt="YouTube"
                               />
                             </a>
                           </li>
@@ -247,10 +159,8 @@ function Header() {
             </div>
           </div>
         </div>
-        <div id="headerfix" ref={headerRef}>
-          <TopMenu />
-          <LatestUpdates />
-        </div>
+        <TopMenu />
+        <LatestUpdates />
       </div>
     </>
   );
