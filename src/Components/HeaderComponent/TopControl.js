@@ -28,14 +28,14 @@ function TopControl({ switchTheme }) {
             Government of Maharashtra
           </li>
 
-          <li>
+          {/* <li>
             <span style={{ fontFamily: "shivaji" }}>
               {" "}
               उच्च व तंत्रशिक्षण विभाग{" "}
             </span>
             <br />
             Higher & Technical Education Department
-          </li>
+          </li> */}
         </ul>
         <ul>
           <li>

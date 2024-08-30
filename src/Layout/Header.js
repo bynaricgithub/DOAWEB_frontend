@@ -60,10 +60,10 @@ function Header() {
                   alt="Logo"
                 />
                 <h3 className="notranslate">
-                  Maharashtra State Board of Art Education
+                  महाराष्ट्र राज्य कला शिक्षण मंडळ, मुंबई
                   <br />
                   <small className="noRead">
-                    महाराष्ट्र राज्य कला शिक्षण मंडळ
+                    Maharashtra State Board of Art Education, Mumbai
                   </small>
                 </h3>
               </a>

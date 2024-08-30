@@ -48,7 +48,6 @@ function GoogleTranslator() {
       >
         <img src="/assets/Images1/toggle.jpg" alt="Translate" height={"22px"} />
       </span>
-
       <div id="google_translate_element"></div>
     </div>
   );

@@ -1,11 +1,11 @@
 import React from "react";
 
-function Aurangabad_Region() {
+function Nagpur_region() {
   return (
     <div>
-      <div className="card mb-3  borderforcard paddingTopxl">
+      <div className="card mb-3 borderforcard paddingTopxl">
         <div className="card-header backgroundColorCardHeader linearimg">
-          <h1 className="fontForHeader">Chatrapati Shambhajinagar Region</h1>
+          <h1 className="fontForHeader">Nagpur Region</h1>
         </div>
         <br />
         <div className="table-responsive">
@@ -39,4 +39,4 @@ function Aurangabad_Region() {
   );
 }
 
-export default Aurangabad_Region;
+export default Nagpur_region;

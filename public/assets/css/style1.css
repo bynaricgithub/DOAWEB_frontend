@@ -344,6 +344,7 @@ th.tbl_heading,
   font-size: 12px;
   min-height: 50px;
 }
+
 .skiptranslate iframe {
   display: none !important;
 }
@@ -992,7 +993,7 @@ body.target {
 
 .heightgallery,
 .heighttableDiv {
-  height: 360px;
+  height: 280px;
   padding: 0;
 }
 
