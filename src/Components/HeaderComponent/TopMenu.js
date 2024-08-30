@@ -1,10 +1,8 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link, useNavigate } from "react-router-dom";
-import API from "../API";
-import { ShowContext } from "../App";
+import API from "../../API";
+import { ShowContext } from "../../App";
 
 function TopMenu() {
   const [query, setQuery] = useState("");

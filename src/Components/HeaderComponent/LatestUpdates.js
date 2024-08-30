@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import API from "../API";
-import { ShowContext } from "../App";
-import ViewPDFModal from "./Modal/ViewPDFModal";
+import API from "../../API";
+import { ShowContext } from "../../App";
+import ViewPDFModal from "../Modal/ViewPDFModal";
 
 const LatestUpdates = () => {
   const { setShow, setMsg } = useContext(ShowContext);

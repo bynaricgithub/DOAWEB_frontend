@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LatestUpdates from "../Components/LatestUpdates";
-import TopControl from "./TopControl";
-import TopMenu from "./TopMenu";
+import LatestUpdates from "../Components/HeaderComponent/LatestUpdates";
+import TopControl from "../Components/HeaderComponent/TopControl";
+import TopMenu from "../Components/HeaderComponent/TopMenu";
 
 function Header() {
   const [query, setQuery] = useState("");
@@ -53,7 +53,7 @@ function Header() {
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
-              <a href="/" className="mt-2">
+              <a href="/" className="my-2">
                 <img
                   src="/assets/Images1/DOA-logo.png"
                   className="img-fluid"
@@ -62,7 +62,9 @@ function Header() {
                 <h3 className="notranslate">
                   Maharashtra State Board of Art Education
                   <br />
-                  <small>महाराष्ट्र राज्य कला शिक्षण मंडळ</small>
+                  <small className="noRead">
+                    महाराष्ट्र राज्य कला शिक्षण मंडळ
+                  </small>
                 </h3>
               </a>
             </div>
