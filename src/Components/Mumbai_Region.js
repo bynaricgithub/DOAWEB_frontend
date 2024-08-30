@@ -16,68 +16,20 @@ function Mumbai_Region() {
                 <th>Name</th>
                 <th>Designation</th>
                 <th>E-mail</th>
-                {/* <th>Officers Image</th> */}
+                <th>Officers Image</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Mr. Pramod U Wayse </td>
-                <td>Dy. Secretary ( T) </td>
-                <td>
-                  <a href="mailto:puwayse@msbte.com">puwayse@msbte.com</a>
+                <td> Shri. Vinod R. Dandge</td>
+                <td>Director MSBAE</td>
+                <td className="text-center">
+                  <a href="mailto:sample@msbte.com">sample@msbte.com</a>
                 </td>
-                {/* <td>
-                  <img
-                    src="/assets/Images1/Puwayse.png"
-                    alt="Mr. Pramod U Wayse"
-                  />
-                </td> */}
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Mr. N. V. Matolkar</td>
-                <td>Assistant Secretary (T)</td>
-                <td>
-                  <a href="mailto:nvmatolkar@msbte.com">nvmatolkar@msbte.com</a>
+                <td className="text-center">
+                  <img src="/assets/Images1/DirectorMSBAE.png" alt="Kanchan" />
                 </td>
-
-                {/* <td>
-                  <img
-                    src="/assets/Images1/Matolkar.png"
-                    alt="Mr. N. V. Matolkar"
-                  />
-                </td> */}
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mrs. Nisha R. Wartha</td>
-                <td>System Analyst</td>
-                <td>
-                  <a href="mailto:nrwartha@msbte.com">nrwartha@msbte.com</a>
-                </td>
-
-                {/* <td>
-                  <img
-                    src="/assets/Images1/nishaw.jpg"
-                    alt="Mrs. Nisha R. Wartha"
-                  />
-                </td> */}
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Mr. S.M.Gaikwad </td>
-                <td>Assistant Secretary ( NT) </td>
-                <td>
-                  <a href="mailto:smgaikwad@msbte.com">smgaikwad@msbte.com</a>
-                </td>
-
-                {/* <td>
-                  <img
-                    src="/assets/Images1/Gaikwad.png"
-                    alt="Mr. S.M.Gaikwad"
-                  />
-                </td> */}
               </tr>
             </tbody>
           </table>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Admin from "../Components/Admin";
+import Aurangabad_Region from "../Components/Chatrapati_Shambhaji_Nagar_Region";
 import Committees from "../Components/Menupages/Committee";
 import GoverningBoard from "../Components/Menupages/GoverningBoard";
 import GoverningCouncil from "../Components/Menupages/GoverningCouncil";
@@ -14,6 +15,8 @@ import Affilation from "../Components/Menupages/affilation";
 import Contact from "../Components/Menupages/contact";
 import Examination from "../Components/Menupages/examination";
 import Institute from "../Components/Menupages/institute";
+import Mumbai_Region from "../Components/Mumbai_Region";
+import Nagpur_region from "../Components/Nagpur_Region";
 import SiteMap from "../Components/SiteMap";
 import WithoutNav from "../Components/WithoutNav";
 import Main from "./Main";
@@ -51,6 +54,12 @@ function Content() {
 						<Route path="/msbaeOfficers" element={<MsbaeOfficers />} />
 						<Route path="/msbaeAct" element={<MsbaeAct />} />
 						<Route path="/committees" element={<Committees />} />
+						<Route path="/mumbai_region" element={<Mumbai_Region />} />
+						<Route path="/nagpur_region" element={<Nagpur_region />} />
+						<Route
+							path="/chatrapati_shambhaji_nagar_region"
+							element={<Aurangabad_Region />}
+						/>
 
 						<Route element={<WithoutNav />}>
 							<Route path="/admin" element={<Admin />} />

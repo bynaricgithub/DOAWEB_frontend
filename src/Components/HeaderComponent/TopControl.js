@@ -1,14 +1,14 @@
 import React from "react";
 import GoogleTranslator from "./GoogleTranslator";
+import ScreenReader from "./ScreenReader";
 import ThemeAndFontChanger from "./ThemeAndFontChanger";
 
 function TopControl({ switchTheme }) {
-  // Function to handle smooth scrolling to the main content
   const scrollToMainContent = (e) => {
-    e.preventDefault(); // Prevent default anchor click behavior
+    e.preventDefault();
 
     const mainContent = document.getElementById("imageMainHomePage");
-    const offset = 75; // Space you want to leave from the top
+    const offset = 65;
     const yCoordinate =
       mainContent.getBoundingClientRect().top + window.pageYOffset - offset;
 
@@ -20,7 +20,7 @@ function TopControl({ switchTheme }) {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light" id="topBack">
-      <div className="container d-flex justify-content-between align-items-center">
+      <div className="container justify-content-between align-items-center">
         <ul>
           <li>
             <span style={{ fontFamily: "shivaji" }}> महाराष्ट्र शासन </span>
@@ -28,24 +28,24 @@ function TopControl({ switchTheme }) {
             Government of Maharashtra
           </li>
 
-          <li>
+          {/* <li>
             <span style={{ fontFamily: "shivaji" }}>
               {" "}
               उच्च व तंत्रशिक्षण विभाग{" "}
             </span>
             <br />
             Higher & Technical Education Department
-          </li>
-
+          </li> */}
+        </ul>
+        <ul>
           <li>
             <a href="#main-content" onClick={scrollToMainContent}>
               Skip to main content
             </a>
           </li>
+
           <li>
-            <a href="/screenreader">
-              <i className="fa fa-volume-up" title="Screen Reader Access"></i>
-            </a>
+            <ScreenReader />
           </li>
 
           <li>
