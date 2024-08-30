@@ -18,46 +18,48 @@ import SiteMap from "../Components/SiteMap";
 import WithoutNav from "../Components/WithoutNav";
 import Main from "./Main";
 import News from "./news";
+import Search from "../Components/Search";
 
 function Content() {
-  // path==="/"?console.log("home"):console.log("nothome")
-  return (
-    <>
-      <main
-        id="imageMainHomePage"
-        className="post"
-        // style={{ backgroundImage: "url(/assets/Images1/Campus_1.png)" }}
-      >
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/affilation" element={<Affilation />} />
-            <Route path="/institute" element={<Institute />} />
-            <Route path="/examination" element={<Examination />} />
-            <Route path="/admission" element={<Admission />} />
-            <Route path="/sitemap" element={<SiteMap />} />
-            <Route path="/vision" element={<Vision />} />
-            <Route
-              path="/organizationalStructure"
-              element={<OrganizationalStructure />}
-            />
-            <Route path="/governingCouncil" element={<GoverningCouncil />} />
-            <Route path="/governingBoard" element={<GoverningBoard />} />
-            <Route path="/msbaeOfficers" element={<MsbaeOfficers />} />
-            <Route path="/msbaeAct" element={<MsbaeAct />} />
-            <Route path="/committees" element={<Committees />} />
+	// path==="/"?console.log("home"):console.log("nothome")
+	return (
+		<>
+			<main
+				id="imageMainHomePage"
+				className="post"
+			// style={{ backgroundImage: "url(/assets/Images1/Campus_1.png)" }}
+			>
+				<div className="container">
+					<Routes>
+						<Route path="/" element={<Main />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/search" element={<Search />} />
+						<Route path="/news" element={<News />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/affilation" element={<Affilation />} />
+						<Route path="/institute" element={<Institute />} />
+						<Route path="/examination" element={<Examination />} />
+						<Route path="/admission" element={<Admission />} />
+						<Route path="/sitemap" element={<SiteMap />} />
+						<Route path="/vision" element={<Vision />} />
+						<Route
+							path="/organizationalStructure"
+							element={<OrganizationalStructure />}
+						/>
+						<Route path="/governingCouncil" element={<GoverningCouncil />} />
+						<Route path="/governingBoard" element={<GoverningBoard />} />
+						<Route path="/msbaeOfficers" element={<MsbaeOfficers />} />
+						<Route path="/msbaeAct" element={<MsbaeAct />} />
+						<Route path="/committees" element={<Committees />} />
 
-            <Route element={<WithoutNav />}>
-              <Route path="/admin" element={<Admin />} />
-            </Route>
-          </Routes>
-        </div>
-      </main>
-    </>
-  );
+						<Route element={<WithoutNav />}>
+							<Route path="/admin" element={<Admin />} />
+						</Route>
+					</Routes>
+				</div>
+			</main>
+		</>
+	);
 }
 
 export default Content;
