@@ -332,17 +332,17 @@ th.tbl_heading,
   padding: 0;
 }
 #topBack ul li:nth-child(1) {
-  border-left: 2px solid var(--border-color-secondary);
+  border-left: 1px solid var(--border-color-secondary);
 }
 #topBack ul li {
   list-style-type: none;
   border-right: 2px solid var(--border-color-secondary);
-  padding: 5px 10px;
+  padding: 4px 10px;
   text-align: center;
   min-width: 40px;
   align-content: center;
   font-size: 12px;
-  min-height: 50px;
+  min-height: 40px;
 }
 
 .skiptranslate iframe {
