@@ -1,22 +1,22 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link, useNavigate } from "react-router-dom";
 import API from "../../API";
 import { ShowContext } from "../../App";
+// import { de } from "../../utils/Helper";
 
 function TopMenu() {
   const [query, setQuery] = useState("");
+
   const navigate = useNavigate();
+
   const { setShow, setMsg } = useContext(ShowContext);
   const [showModal, setShowModal] = useState(false);
   const [file, setFile] = useState("");
-  const [list, setList] = useState([]);
-
   const handleClose = () => setShowModal(false);
-  const handleShow = (fileUrl) => {
-    setFile(fileUrl);
-    setShowModal(true);
-  };
+  const handleShow = () => setShowModal(true);
+  const [list, setList] = useState([]);
 
   useEffect(() => {
     getMenu(setList, setShow, setMsg);
@@ -28,64 +28,70 @@ function TopMenu() {
         <a
           className="nav-link dropdown-toggle fontfornav navText"
           href="#"
-          onClick={(e) => e.preventDefault()} // Prevent default behavior to stop page refresh
+          aria-disabled="true"
           id="navbarDropdown"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {item.title} {!last && <span className="marginLSpan">|</span>}
+          <span className="custom-translate">{item.title}</span>{" "}
+          {!last && <span className="marginLSpan">|</span>}
         </a>
         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           {item.children.map((rec, index) => (
             <li key={index}>
               {rec.menu_url && rec.menu_url.includes(".pdf") ? (
                 <a
-                  className="dropdown-item"
+                  className="dropdown-item custom-translate"
                   href="#"
-                  onClick={(e) => {
-                    e.preventDefault(); // Prevent default behavior to stop page refresh
-                    handleShow(rec.menu_url);
+                  aria-disabled="true"
+                  onClick={() => {
+                    handleShow();
+                    setFile(rec.menu_url);
                   }}
                 >
                   {rec.title}
                 </a>
               ) : (
-                <a
-                  className="dropdown-item"
-                  href={rec.menu_url || "#"}
-                  target={
-                    rec.menu_url &&
-                    (rec.menu_url.includes("https://") ||
-                      rec.menu_url.includes("http://"))
-                      ? "_blank"
-                      : "_self"
-                  }
-                  onClick={(e) => rec.menu_url === "#" && e.preventDefault()} // Prevent default if the URL is "#"
-                >
-                  {rec.title}
-                </a>
+                (rec.menu_url?.includes("https://") ||
+                  rec.menu_url?.includes("http://")) ?
+                  <a
+                    className="dropdown-item custom-translate"
+                    href={rec.menu_url || "#"}
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    {rec.title}
+                  </a> : <Link className="dropdown-item custom-translate" to={rec.menu_url} >{rec.title}</Link>
               )}
               {rec.children && rec.children.length > 0 && (
-                <ul className="submenu dropdown-menu">
-                  {rec.children.map((i, index) => (
+                <ul className="submenu dropdown-menu ">
+                  {rec.children.map((rec2, index) => (
                     <li key={index}>
-                      <a
-                        className="dropdown-item"
-                        href={i.menu_url}
-                        target={
-                          i.menu_url &&
-                          (i.menu_url.includes("https://") ||
-                            i.menu_url.includes("http://"))
-                            ? "_blank"
-                            : "_self"
-                        }
-                        onClick={(e) =>
-                          i.menu_url === "#" && e.preventDefault()
-                        } // Prevent default if the URL is "#"
-                      >
-                        {i.title}
-                      </a>
+                      {rec2?.menu_url && rec2?.menu_url?.includes(".pdf") ? (
+                        <a
+                          className="dropdown-item custom-translate"
+                          href="#"
+                          aria-disabled="true"
+                          onClick={() => {
+                            handleShow();
+                            setFile(rec2.menu_url);
+                          }}
+                        >
+                          {rec2.title}
+                        </a>
+                      ) : (
+                        (rec2?.menu_url?.includes("https://") ||
+                          rec2?.menu_url?.includes("http://")) ?
+                          <a
+                            className="dropdown-item custom-translate"
+                            href={rec2.menu_url || "#"}
+                            target={"_blank"}
+                            rel="noreferrer"
+                          >
+                            {rec2.title}
+                          </a> : <Link className="dropdown-item custom-translate" to={rec2.menu_url} >{rec2.title}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -95,34 +101,36 @@ function TopMenu() {
         </ul>
       </li>
     ) : (
-      <li className="nav-item" key={index}>
+      <li className="nav-item">
         {item.menu_url && item.menu_url.includes(".pdf") ? (
           <a
             className="nav-link fontfornav navText"
             href="#"
-            onClick={(e) => {
-              e.preventDefault(); // Prevent default behavior to stop page refresh
-              handleShow(item.menu_url);
+            aria-disabled="true"
+            onClick={() => {
+              handleShow();
+              setFile(item.menu_url);
             }}
           >
-            {item.title} {!last && <span className="marginLSpan">|</span>}
+            <span className="custom-translate">{item.title}</span>{" "}
+            {!last && <span className="marginLSpan">|</span>}
           </a>
-        ) : // r links links
-        item.menu_url &&
-          (item.menu_url.includes("https://") ||
-            item.menu_url.includes("http://")) ? (
+        ) : (
           <a
             className="nav-link fontfornav navText"
             href={item.menu_url}
-            target="_blank"
-            onClick={(e) => item.menu_url === "#" && e.preventDefault()}
+            target={
+              item.menu_url &&
+                (item.menu_url.includes("https://") ||
+                  item.menu_url.includes("http://"))
+                ? "_blank"
+                : "_self"
+            }
+            rel="noreferrer"
           >
-            {item.title} {!last && <span className="marginLSpan">|</span>}
+            <span className="custom-translate">{item.title}</span>{" "}
+            {!last && <span className="marginLSpan">|</span>}
           </a>
-        ) : (
-          <Link className="nav-link fontfornav navText" to={item.menu_url}>
-            {item.title} {!last && <span className="marginLSpan">|</span>}
-          </Link>
         )}
       </li>
     );
@@ -139,9 +147,11 @@ function TopMenu() {
           <div className="search mt-0 m-show">
             <input
               type="text"
-              className="form-control"
-              placeholder="Search..."
-              onChange={(e) => setQuery(e.target.value)}
+              className="form-control custom-translate"
+              placeholder="Serach"
+              onChange={(e) => {
+                setQuery(e.target.value);
+              }}
               onKeyPress={(event) => {
                 if (event.key === "Enter") {
                   navigate(`/search?query=${query}`);
@@ -149,7 +159,7 @@ function TopMenu() {
               }}
             />
             <i
-              className="fa fa-search fa-flip-horizontal searchbarbackground"
+              className="fa fa-search fa-flip-horizontal serachbarbackground "
               aria-hidden="true"
               onClick={() => {
                 navigate(`/search?query=${query}`);
@@ -177,10 +187,11 @@ function TopMenu() {
                 list.map((item, index) => (
                   <MenuItem
                     item={item}
-                    last={index === list.length - 1} // Fixes last item check
+                    last={index === list.length}
                     key={index}
                   />
                 ))}
+
               <div
                 className="navbar-toggler close custom-close"
                 type="button"
@@ -195,19 +206,30 @@ function TopMenu() {
           </div>
         </div>
       </nav>
+      {/* <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <Modal.Body closeButton>
+          <LogIn />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal> */}
       <Modal
         show={showModal}
         onHide={handleClose}
         centered
         contentClassName="modal-pdf-content"
       >
-        <Modal.Header closeButton />
-        <Modal.Body>
-          <iframe
-            title="PDF Viewer"
-            className="w-100 h-100"
-            src={file}
-          ></iframe>
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Body closeButton>
+          <iframe title="myFrame" className="w-100 h-100" src={file}></iframe>
         </Modal.Body>
       </Modal>
     </>
@@ -225,7 +247,8 @@ function getMenu(setList, setShow, setMsg) {
               ...child,
               children: arrayToTree(arr, child.id),
             }));
-        const list = arrayToTree(res.data.data, 0);
+        let data = res.data.data
+        let list = arrayToTree(data, 0);
         setList(list);
       }
     })
