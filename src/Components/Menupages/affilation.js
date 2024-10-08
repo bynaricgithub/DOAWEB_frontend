@@ -4,21 +4,13 @@ import { Col, Container, Row } from "react-bootstrap";
 function Affilation() {
   return (
     <>
-      <div className="commonSubheader">
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <h3 className="innercommTitle">Affilation</h3>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      
       <div className="row">
         <div className="col-sm-12">
           <div className="card mb-3 borderforcard paddingTopxl">
-            {/* <div className="card-header backgroundColorCardHeader">
+          <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">Affilation</h1>
-            </div> */}
+            </div>
             <a
               href="https://doaonline.in/institute-login"
               className="links text-center p-2 mt-2"

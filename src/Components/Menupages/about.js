@@ -4,20 +4,13 @@ import { Col, Container, Row } from "react-bootstrap";
 function About() {
   return (
     <>
-      <div className="commonSubheader">
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <div className="">
-                <h3 className="innercommTitle">About Us</h3>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+     
       <div className="row">
         <div className="col-sm-12">
           <div className="card mb-3 borderforcard paddingTopxl">
+          <div className="card-header backgroundColorCardHeader">
+              <h1 className="fontForHeader">About Us</h1>
+            </div>
             <div className="card-body px-4 row">
               <div className="col-xl-5 col-sm-12">
                 <p className="commonparatext px-3">

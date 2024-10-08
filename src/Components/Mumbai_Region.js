@@ -20,19 +20,9 @@ function Mumbai_Region() {
               </tr>
             </thead>
             <tbody>
+            
               <tr>
                 <td>1</td>
-                <td> Shri. Vinod R. Dandge</td>
-                <td>Director MSBAE</td>
-                <td className="text-center">
-                  <a href="mailto:sample@msbte.com">sample@msbte.com</a>
-                </td>
-                <td className="text-center">
-                  <img src="/assets/Images1/DirectorMSBAE.png" alt="Kanchan" />
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
                 <td> Smt. Arati Shravasti</td>
                 <td>Deputy Secretary (Art), MSBAE</td>
                 <td className="text-center">

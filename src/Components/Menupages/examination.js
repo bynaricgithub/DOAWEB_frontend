@@ -4,18 +4,21 @@ import { Col, Container, Row } from "react-bootstrap";
 function Examination() {
   return (
     <>
-      <div className="commonSubheader">
+      {/* <div className="commonSubheader">
         <Container>
           <Row>
             <Col lg={12}>
-              <h3 className="innercommTitle">Examination</h3>
+              <h3 className="innercommTitle"></h3>
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <div className="row">
         <div className="col-sm-12">
           <div className="card mb-3 borderforcard paddingTopxl">
+            <div className="card-header backgroundColorCardHeader">
+              <h1 className="fontForHeader">Examination</h1>
+            </div>
             {/* <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">Affilation</h1>
             </div> */}

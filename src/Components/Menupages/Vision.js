@@ -18,11 +18,10 @@ function Vision() {
             <div className="row g-0">
               <div className="card-body removePadding">
                 <p className="p-2 fontp">
-                  To ensure that the Diploma level Technical Education
-                  constantly matches the latest requirements of Technology and
-                  industry and includes the all-round personal development of
-                  students including social concerns and to become globally
-                  competitive, technology led organization.
+                  To ensure that the Diploma level Art Education constantly
+                  matches the latest requirements of industry and includes the
+                  all-round personal development of students including social
+                  concerns and to become globally competitive.
                   <br />
                   {/* <a
                 // href="/assets/file/Vision.pdf"
@@ -69,10 +68,9 @@ function Vision() {
             <div className="row g-0">
               <div className="card-body removePadding">
                 <p className="p-2 fontp">
-                  To provide high quality technical and managerial manpower,
-                  information and consultancy services to the industry and
-                  community to enable the industry and community to face the
-                  challenging technological & environmental challenges.
+                  To provide high quality Art Education and managerial manpower,
+                  information and services to the industry and community to
+                  enable the industry and community to face the challenges.
                 </p>
                 <br />
               </div>

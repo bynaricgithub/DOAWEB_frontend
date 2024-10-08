@@ -20,26 +20,16 @@ function Nagpur_region() {
               </tr>
             </thead>
             <tbody>
+             
               <tr>
                 <td>1</td>
-                <td> Shri. Vinod R. Dandge</td>
-                <td>Director MSBAE</td>
-                <td className="text-center">
-                  <a href="mailto:sample@msbte.com">sample@msbte.com</a>
-                </td>
-                <td className="text-center">
-                  <img src="/assets/Images1/DirectorMSBAE.png" alt="DirectorMSBAE" />
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
                 <td>Shri. Sandeep Dongre</td>
                 <td>Secretary, MSBAE</td>
                 <td className="text-center">
                   <a href="mailto:dongaresanny@gmail.com">dongaresanny@gmail.com</a>
                 </td>
                 <td className="text-center">
-                  <img src="/assets/Images1/SandeepDongresir.jpeg" alt="SandeepDongresir" />
+                  <img src="/assets/Images1/sandeepdongresir.jpeg" alt="SandeepDongresir" />
                 </td>
               </tr>
             </tbody>

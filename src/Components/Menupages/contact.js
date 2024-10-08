@@ -4,18 +4,13 @@ import { Col, Container, Row } from "react-bootstrap";
 function Contact() {
   return (
     <>
-      <div className="commonSubheader">
-        <Container>
-          <Row>
-            <Col lg={12}>
-              <h3 className="innercommTitle">Contact Us</h3>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+     
       <div className="row">
         <div className="col-sm-12">
-          <div className="card my-3  p-3">
+          <div className="card my-3">
+          <div className="card-header backgroundColorCardHeader">
+              <h1 className="fontForHeader">Contact Us</h1>
+            </div>
             <div className="card-body row">
               <div className="col-lg-6 col-sm-12">
                 <h6 className="colorcontact1">

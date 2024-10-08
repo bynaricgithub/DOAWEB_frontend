@@ -4,21 +4,21 @@ import { Col, Container, Row } from "react-bootstrap";
 function Admission() {
   return (
     <>
-      <div className="commonSubheader">
+      {/* <div className="commonSubheader">
         <Container>
           <Row>
             <Col lg={12}>
-              <h3 className="innercommTitle">Admission</h3>
+              <h3 className="innercommTitle"></h3>
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <div className="row">
         <div className="col-sm-12">
           <div className="card mb-3 borderforcard paddingTopxl">
-            {/* <div className="card-header backgroundColorCardHeader">
-              <h1 className="fontForHeader">Affilation</h1>
-            </div> */}
+          <div className="card-header backgroundColorCardHeader">
+              <h1 className="fontForHeader">Admission</h1>
+            </div>
             <a
               href="https://sss.msbae.in/ay2425/"
               className="links text-center p-2"

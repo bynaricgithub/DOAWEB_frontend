@@ -13,13 +13,7 @@ function DirectorProfile() {
           />
           <h2> Shri. Vinod R. Dandge</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          To enhance Art Education Governance, the Maharashtra Government has established Maharashtra State Board of Art Education under Maharashtra Act, XII. This is published in the Government Gazette on January 19, 2024, and officially came into effect on February 23, 2024. The Maharashtra State Board of Art Education is established to regulate the matters pertaining to diploma level art education in the state of Maharashtra.  Government, Non-Government Aided and Unaided Institutes are affiliated to Maharashtra State Board of Art Education. Our mission is to create a vibrant Art Education environment that fosters creativity and innovation. We aim to ensure effective regulation and support for our institutions, ultimately raising the standards of art education across the state.
           </p>
         </div>
       </div>

@@ -20,15 +20,16 @@ function Aurangabad_Region() {
               </tr>
             </thead>
             <tbody>
-              <tr>
+            <tr>
                 <td>1</td>
-                <td> Shri. Vinod R. Dandge</td>
-                <td>Director MSBAE</td>
+                <td> Smt. Arati Shravasti</td>
+                <td>Deputy Secretary (Art), MSBAE</td>
                 <td className="text-center">
-                  <a href="mailto:sample@msbte.com">sample@msbte.com</a>
+                  <a href="">-</a>
                 </td>
                 <td className="text-center">
-                  <img src="/assets/Images1/DirectorMSBAE.png" alt="Kanchan" />
+                  -
+                  {/* <img src="" alt="Kanchan" /> */}
                 </td>
               </tr>
             </tbody>
