@@ -19,15 +19,15 @@ function Admission() {
           <div className="card-header backgroundColorCardHeader">
               <h1 className="fontForHeader">Admission</h1>
             </div>
-            <a
+            {/* <a
               href="https://sss.msbae.in/ay2425/"
               className="links text-center p-2"
             >
               Fees Approval System For Academic Year 2024-25
-            </a>
+            </a> */}
             <div className="row g-0">
               <div className="card-body removePadding row">
-                <div className="col-lg-6 col-sm-6">
+                <div className="col-lg-12 col-sm-12">
                   <div className="pdfDiv">
                     <iframe
                       src={"/assets/file/admission.pdf"}
@@ -36,7 +36,7 @@ function Admission() {
                     />
                   </div>
                 </div>
-                <div className="col-lg-6 col-sm-6">
+                {/* <div className="col-lg-6 col-sm-6">
                   <div className="pdfDiv">
                     <iframe
                       src={"/assets/file/ffc-circular.pdf"}
@@ -44,7 +44,7 @@ function Admission() {
                       title="PDF"
                     />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
