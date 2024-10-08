@@ -26,11 +26,10 @@ function Mumbai_Region() {
                 <td> Smt. Arati Shravasti</td>
                 <td>Deputy Secretary (Art), MSBAE</td>
                 <td className="text-center">
-                  <a href="">-</a>
+                <a href="mailto:aaratishravasti79@gmail.com">aaratishravasti79@gmail.com</a>
                 </td>
                 <td className="text-center">
-                  -
-                  {/* <img src="" alt="Kanchan" /> */}
+                <img src="/assets/Images1/Artimam.jpeg" alt="Artimam" />
                 </td>
               </tr>
             </tbody>
