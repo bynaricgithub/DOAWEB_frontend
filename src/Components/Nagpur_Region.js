@@ -28,7 +28,18 @@ function Nagpur_region() {
                   <a href="mailto:sample@msbte.com">sample@msbte.com</a>
                 </td>
                 <td className="text-center">
-                  <img src="/assets/Images1/DirectorMSBAE.png" alt="Kanchan" />
+                  <img src="/assets/Images1/DirectorMSBAE.png" alt="DirectorMSBAE" />
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Shri. Sandeep Dongre</td>
+                <td>Secretary, MSBAE</td>
+                <td className="text-center">
+                  <a href="mailto:dongaresanny@gmail.com">dongaresanny@gmail.com</a>
+                </td>
+                <td className="text-center">
+                  <img src="/assets/Images1/SandeepDongresir.jpeg" alt="SandeepDongresir" />
                 </td>
               </tr>
             </tbody>

@@ -31,6 +31,18 @@ function Mumbai_Region() {
                   <img src="/assets/Images1/DirectorMSBAE.png" alt="Kanchan" />
                 </td>
               </tr>
+              <tr>
+                <td>2</td>
+                <td> Smt. Arati Shravasti</td>
+                <td>Deputy Secretary (Art), MSBAE</td>
+                <td className="text-center">
+                  <a href="">-</a>
+                </td>
+                <td className="text-center">
+                  -
+                  {/* <img src="" alt="Kanchan" /> */}
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
