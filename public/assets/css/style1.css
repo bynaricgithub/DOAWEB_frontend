@@ -2351,6 +2351,9 @@ img.goog-te-gadget-icon {
 }
 
 @media (max-width: 512px) {
+  .accorianpadding{
+    padding: 10px !important;
+  }
   #topBack {
     display: none;
   }
@@ -3197,6 +3200,12 @@ img.goog-te-gadget-icon {
 }
 
 @media screen and (min-width: 320px) and (max-width: 367px) {
+  .accorianpadding{
+    padding: 10px !important;
+  }
+  .accorianpadding{
+    padding: 10px !important;
+  }
   span.names1 {
     font-size: 11px;
     margin: 1px auto 0;
@@ -3320,6 +3329,9 @@ img.goog-te-gadget-icon {
 }
 
 @media screen and (min-width: 368px) and (max-width: 376px) {
+  .accorianpadding{
+    padding: 10px !important;
+  }
   #topBack {
     display: none;
   }
@@ -3346,6 +3358,9 @@ img.goog-te-gadget-icon {
 }
 
 @media screen and (min-width: 376px) and (max-width: 426px) {
+  .accorianpadding{
+    padding: 10px !important;
+  }
   span.names {
     font-size: 12px;
   }
@@ -3441,6 +3456,9 @@ img.goog-te-gadget-icon {
 }
 
 @media screen and (min-width: 513px) and (max-width: 576px) {
+  .accorianpadding{
+    padding: 10px !important;
+  }
   #google_translate_element {
     left: 160px;
     padding-left: 10px;
