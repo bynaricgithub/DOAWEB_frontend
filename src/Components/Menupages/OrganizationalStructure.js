@@ -1,9 +1,10 @@
 import React from "react";
+import { s3 } from "../../utils/Helper";
 
 function OrganizationalStructure() {
-  return (
-    <>
-      {/* <div class="card mb-3  borderforcard paddingTopxl">
+    return (
+        <>
+            {/* <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">ORGANIZATIONAL STRUCTURE</p>
         </div>
@@ -158,68 +159,68 @@ function OrganizationalStructure() {
         </div>
       </div> */}
 
-      <div class="card mb-3  borderforcard paddingTopxl">
-        <div class="card-header backgroundColorCardHeader">
-          <p class="fontForHeader">ORGANIZATIONAL STRUCTURE</p>
-        </div>
-        <div class="row g-0">
-          <div class="card-body removePadding">
-            <div className="row">
-              <div className="col-xl-12 col-sm-12 text-center py-3">
-                <img
-                  src="/assets/Images1/ORG_Chart.jpg"
-                  className="p-0 img-fluid"
-                  alt="Org Chart"
-                  useMap="#org_chart"
-                />
-                <map name="org_chart">
-                  <area
-                    target="_blank"
-                    alt="Governing Council"
-                    title="Governing Council"
-                    href="/governingCouncil"
-                    coords="480,164,63"
-                    shape="circle"
-                  />
-                  <area
-                    target="_blank"
-                    alt="Governing Board"
-                    title="Governing Board"
-                    href="/governingBoard"
-                    coords="482,260,421,304,444,375,516,373,538,305,482,262,420,304"
-                    shape="poly"
-                  />
-                  <area
-                    target="_blank"
-                    alt="MSBAE Mumbai"
-                    title="MSBAE Mumbai"
-                    href="/mumbai_region"
-                    coords="61,544,304,622"
-                    shape="rect"
-                  />
-                  <area
-                    target="_blank"
-                    alt="MSBAE nagpur"
-                    title="MSBAE nagpur"
-                    href="/nagpur_region"
-                    coords="361,544,596,620"
-                    shape="rect"
-                  />
-                  <area
-                    target="_blank"
-                    alt="MSBAE Chatrapati Sambhaji NAgar"
-                    title="MSBAE Chatrapati Sambhaji NAgar"
-                    href="/chatrapati_shambhaji_nagar_region"
-                    coords="652,545,903,623"
-                    shape="rect"
-                  />
-                </map>
-              </div>
+            <div class="card mb-3  borderforcard paddingTopxl">
+                <div class="card-header backgroundColorCardHeader">
+                    <p class="fontForHeader">ORGANIZATIONAL STRUCTURE</p>
+                </div>
+                <div class="row g-0">
+                    <div class="card-body removePadding">
+                        <div className="row">
+                            <div className="col-xl-12 col-sm-12 text-center py-3">
+                                <img
+                                    src={s3 + "/Images1/ORG_Chart.jpg"}
+                                    className="p-0 img-fluid"
+                                    alt="Org Chart"
+                                    useMap="#org_chart"
+                                />
+                                <map name="org_chart">
+                                    <area
+                                        target="_blank"
+                                        alt="Governing Council"
+                                        title="Governing Council"
+                                        href="/governingCouncil"
+                                        coords="480,164,63"
+                                        shape="circle"
+                                    />
+                                    <area
+                                        target="_blank"
+                                        alt="Governing Board"
+                                        title="Governing Board"
+                                        href="/governingBoard"
+                                        coords="482,260,421,304,444,375,516,373,538,305,482,262,420,304"
+                                        shape="poly"
+                                    />
+                                    <area
+                                        target="_blank"
+                                        alt="MSBAE Mumbai"
+                                        title="MSBAE Mumbai"
+                                        href="/mumbai_region"
+                                        coords="61,544,304,622"
+                                        shape="rect"
+                                    />
+                                    <area
+                                        target="_blank"
+                                        alt="MSBAE nagpur"
+                                        title="MSBAE nagpur"
+                                        href="/nagpur_region"
+                                        coords="361,544,596,620"
+                                        shape="rect"
+                                    />
+                                    <area
+                                        target="_blank"
+                                        alt="MSBAE Chatrapati Sambhaji NAgar"
+                                        title="MSBAE Chatrapati Sambhaji NAgar"
+                                        href="/chatrapati_shambhaji_nagar_region"
+                                        coords="652,545,903,623"
+                                        shape="rect"
+                                    />
+                                </map>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      {/* <div class="card mb-3  borderforcard paddingTopxl">
+            {/* <div class="card mb-3  borderforcard paddingTopxl">
         <div class="card-header backgroundColorCardHeader">
           <p class="fontForHeader">FUNCTIONING OF MSBTE</p>
         </div>
@@ -262,8 +263,8 @@ function OrganizationalStructure() {
           </div>
         </div>
       </div> */}
-    </>
-  );
+        </>
+    );
 }
 
 export default OrganizationalStructure;

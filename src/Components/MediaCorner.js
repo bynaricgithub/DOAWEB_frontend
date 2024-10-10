@@ -4,30 +4,31 @@ import API from "../API";
 // import Carousel from "react-multi-carousel";
 import EventCorousel from "../Layout/EventCorousel";
 import VideoSlider from "./VideoSlider";
+import { de } from "../utils/Helper";
 
 function MediaCorner() {
-  const { setShow, setMsg } = useContext(ShowContext);
-  const [videos, setVideos] = useState();
+    const { setShow, setMsg } = useContext(ShowContext);
+    const [videos, setVideos] = useState();
 
-  useEffect(() => {
-    getVideos(setVideos, setShow, setMsg);
-  }, []);
+    useEffect(() => {
+        getVideos(setVideos, setShow, setMsg);
+    }, []);
 
 
-  return (
-    <>
-      <div class="row">
-        <div className="col-sm-6">
-          <div id="im-slider">
-            <EventCorousel />
-          </div>
-        </div>
+    return (
+        <>
+            <div class="row">
+                <div className="col-sm-6">
+                    <div id="im-slider">
+                        <EventCorousel />
+                    </div>
+                </div>
 
-        {videos && videos.length > 0 && (
-          <div className="col-sm-6">
-            <div className="row">
-              <VideoSlider videoList={videos} />
-              {/* <Carousel
+                {videos && videos.length > 0 && (
+                    <div className="col-sm-6">
+                        <div className="row">
+                            <VideoSlider videoList={videos} />
+                            {/* <Carousel
                 beforeChange={(nextSlide, state) => {
                   console.log("nextSlide: ", nextSlide);
                   console.log("state:", state)
@@ -99,25 +100,25 @@ function MediaCorner() {
                   </div>
                 ))}
               </Carousel> */}
+                        </div>
+                    </div>
+                )}
             </div>
-          </div>
-        )}
-      </div>
-    </>
-  );
+        </>
+    );
 }
 
 function getVideos(setList, setShow, setMsg) {
-  API.get("EventVideos")
-    .then((res) => {
-      if (res.data.status === "success") {
-        setList(res.data.data);
-      }
-    })
-    .catch((error) => {
-      setShow(true);
-      setMsg(error.response.data.message);
-    });
+    API.get("EventVideos")
+        .then((res) => {
+            if (res.data.status === "success") {
+                setList(JSON.parse(de(res.data.data)));
+            }
+        })
+        .catch((error) => {
+            setShow(true);
+            setMsg(error.response.data.message);
+        });
 }
 
 export default MediaCorner;

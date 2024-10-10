@@ -1,10 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useEffect, useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Link, useNavigate } from "react-router-dom";
 import API from "../../API";
 import { ShowContext } from "../../App";
-// import { de } from "../../utils/Helper";
+import { de } from "../../utils/Helper";
 
 function TopMenu() {
   const [query, setQuery] = useState("");
@@ -18,119 +17,181 @@ function TopMenu() {
   const handleShow = () => setShowModal(true);
   const [list, setList] = useState([]);
 
+  // State to manage open submenus on mobile
+  const [openSubmenus, setOpenSubmenus] = useState({});
+
   useEffect(() => {
     getMenu(setList, setShow, setMsg);
   }, []);
 
+  // Toggle the submenu by its ID
+  const toggleSubmenu = (id) => {
+    setOpenSubmenus((prevState) => {
+      const newState = { ...prevState };
+      newState[id] = !newState[id]; // Toggle current submenu
+      return newState;
+    });
+  };
+
+  const isMobile = window.innerWidth <= 600;
+
   function MenuItem({ item, last, index }) {
-    return item.children && item.children.length > 0 ? (
-      <li className="nav-item dropdown" key={index}>
-        <a
-          className="nav-link dropdown-toggle fontfornav navText"
-          href="#"
-          aria-disabled="true"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <span className="custom-translate">{item.title}</span>{" "}
-          {!last && <span className="marginLSpan">|</span>}
-        </a>
-        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-          {item.children.map((rec, index) => (
-            <li key={index}>
-              {rec.menu_url && rec.menu_url.includes(".pdf") ? (
-                <a
-                  className="dropdown-item custom-translate"
-                  href="#"
-                  aria-disabled="true"
-                  onClick={() => {
-                    handleShow();
-                    setFile(rec.menu_url);
-                  }}
-                >
-                  {rec.title}
-                </a>
-              ) : (
-                (rec.menu_url?.includes("https://") ||
-                  rec.menu_url?.includes("http://")) ?
+    const hasChildren = item.children && item.children.length > 0;
+
+    const handleMouseEnter = (event) => {
+      const submenu = event.target.nextElementSibling;
+      if (submenu) {
+        requestAnimationFrame(() => {
+          const submenuRect = submenu.getBoundingClientRect();
+          const isOutOfViewport = submenuRect.right > window.innerWidth;
+          console.log(
+            "Submenu right:",
+            submenuRect.right,
+            "Window width:",
+            window.innerWidth,
+            "Out of viewport:",
+            isOutOfViewport
+          );
+          if (isOutOfViewport) {
+            submenu.setAttribute("data-flip", "left");
+          } else {
+            submenu.removeAttribute("data-flip");
+          }
+        });
+      }
+    };
+
+    return (
+      <li className={`nav-item ${hasChildren ? "dropdown" : ""}`} key={index}>
+        {/* Main Parent Links or Submenu Toggle */}
+        {item.menu_url ? (
+          <Link
+            className={`nav-link ${hasChildren
+              ? "dropdown-toggle fontfornav navText"
+              : "fontfornav navText"
+              }`}
+            to={item.menu_url}
+            onClick={(e) => {
+              if (isMobile && hasChildren) {
+                e.preventDefault();
+                toggleSubmenu(item.id); // For mobile, toggle submenu on click
+              }
+            }}
+            aria-expanded={openSubmenus[item.id] || false}
+            onMouseEnter={hasChildren ? handleMouseEnter : null}
+          >
+            <span className="custom-translate">{item.title}</span>
+            {!last && <span className="marginLSpan">|</span>}
+          </Link>
+        ) : (
+          <span
+            className="nav-link dropdown-toggle fontfornav navText"
+            onClick={() => toggleSubmenu(item.id)} // Toggle submenu if no link (it's just a parent)
+            aria-expanded={openSubmenus[item.id] || false}
+            onMouseEnter={hasChildren ? handleMouseEnter : null}
+          >
+            <span className="custom-translate">{item.title}</span>
+            {!last && <span className="marginLSpan">|</span>}
+          </span>
+        )}
+
+        {/* Render Submenu */}
+        {hasChildren && (
+          <ul
+            className={`dropdown-menu ${openSubmenus[item.id] ? "showSub" : ""
+              }`}
+          >
+            {item.children.map((rec, index) => (
+              <li key={index}>
+                {rec.menu_url && rec.menu_url.includes(".pdf") ? (
+                  // For PDF links
+                  <span
+                    className="dropdown-item custom-translate"
+                    onClick={() => {
+                      handleShow();
+                      setFile(rec.menu_url);
+                    }}
+                  >
+                    {rec.title}
+                  </span>
+                ) : rec.menu_url?.includes("https://") ||
+                  rec.menu_url?.includes("http://") ? (
+                  // External links
                   <a
                     className="dropdown-item custom-translate"
-                    href={rec.menu_url || "#"}
-                    target={"_blank"}
+                    href={rec.menu_url}
+                    target="_blank"
                     rel="noreferrer"
                   >
                     {rec.title}
-                  </a> : <Link className="dropdown-item custom-translate" to={rec.menu_url} >{rec.title}</Link>
-              )}
-              {rec.children && rec.children.length > 0 && (
-                <ul className="submenu dropdown-menu ">
-                  {rec.children.map((rec2, index) => (
-                    <li key={index}>
-                      {rec2?.menu_url && rec2?.menu_url?.includes(".pdf") ? (
-                        <a
-                          className="dropdown-item custom-translate"
-                          href="#"
-                          aria-disabled="true"
-                          onClick={() => {
-                            handleShow();
-                            setFile(rec2.menu_url);
-                          }}
-                        >
-                          {rec2.title}
-                        </a>
-                      ) : (
-                        (rec2?.menu_url?.includes("https://") ||
-                          rec2?.menu_url?.includes("http://")) ?
-                          <a
-                            className="dropdown-item custom-translate"
-                            href={rec2.menu_url || "#"}
-                            target={"_blank"}
-                            rel="noreferrer"
-                          >
-                            {rec2.title}
-                          </a> : <Link className="dropdown-item custom-translate" to={rec2.menu_url} >{rec2.title}</Link>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      </li>
-    ) : (
-      <li className="nav-item">
-        {item.menu_url && item.menu_url.includes(".pdf") ? (
-          <a
-            className="nav-link fontfornav navText"
-            href="#"
-            aria-disabled="true"
-            onClick={() => {
-              handleShow();
-              setFile(item.menu_url);
-            }}
-          >
-            <span className="custom-translate">{item.title}</span>{" "}
-            {!last && <span className="marginLSpan">|</span>}
-          </a>
-        ) : (
-          <a
-            className="nav-link fontfornav navText"
-            href={item.menu_url}
-            target={
-              item.menu_url &&
-                (item.menu_url.includes("https://") ||
-                  item.menu_url.includes("http://"))
-                ? "_blank"
-                : "_self"
-            }
-            rel="noreferrer"
-          >
-            <span className="custom-translate">{item.title}</span>{" "}
-            {!last && <span className="marginLSpan">|</span>}
-          </a>
+                  </a>
+                ) : rec.menu_url && rec.menu_url.startsWith("/") ? (
+                  // Internal links
+                  <Link
+                    className="dropdown-item custom-translate"
+                    to={rec.menu_url}
+                  >
+                    {rec.title}
+                  </Link>
+                ) : rec.children && rec.children.length > 0 ? (
+                  // Render Submenu for nested items without recursion
+                  <>
+                    <span
+                      className="dropdown-item custom-translate"
+                      onClick={() => toggleSubmenu(rec.id)}
+                    >
+                      {rec.title}
+                    </span>
+                    <ul
+                      className={`submenu dropdown-menu ${openSubmenus[rec.id] ? "showSub" : ""
+                        }`}
+                    >
+                      {rec.children.map((rec2, index) => (
+                        <li key={index}>
+                          {rec2.menu_url && rec2.menu_url.includes(".pdf") ? (
+                            // Nested PDF or file links
+                            <span
+                              className="dropdown-item custom-translate"
+                              onClick={() => {
+                                handleShow();
+                                setFile(rec2.menu_url);
+                              }}
+                            >
+                              {rec2.title}
+                            </span>
+                          ) : rec2.menu_url?.includes("https://") ||
+                            rec2.menu_url?.includes("http://") ? (
+                            // Nested External Links
+                            <a
+                              className="dropdown-item custom-translate"
+                              href={rec2.menu_url}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {rec2.title}
+                            </a>
+                          ) : (
+                            // Nested Internal Links
+                            <Link
+                              className="dropdown-item custom-translate"
+                              to={rec2.menu_url}
+                            >
+                              {rec2.title}
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  // Submenu item with no children
+                  <span className="dropdown-item custom-translate">
+                    {rec.title}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
         )}
       </li>
     );
@@ -148,7 +209,7 @@ function TopMenu() {
             <input
               type="text"
               className="form-control custom-translate"
-              placeholder="Serach"
+              placeholder="Search"
               onChange={(e) => {
                 setQuery(e.target.value);
               }}
@@ -206,21 +267,7 @@ function TopMenu() {
           </div>
         </div>
       </nav>
-      {/* <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-        </Modal.Header>
-        <Modal.Body closeButton>
-          <LogIn />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
+
       <Modal
         show={showModal}
         onHide={handleClose}
@@ -247,7 +294,7 @@ function getMenu(setList, setShow, setMsg) {
               ...child,
               children: arrayToTree(arr, child.id),
             }));
-        let data = res.data.data
+        let data = JSON.parse(de(res.data.data));
         let list = arrayToTree(data, 0);
         setList(list);
       }

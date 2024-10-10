@@ -1,76 +1,77 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { s3 } from "../../utils/Helper";
 
 function About() {
-  return (
-    <>
-     
-      <div className="row">
-        <div className="col-sm-12">
-          <div className="card mb-3 borderforcard paddingTopxl">
-          <div className="card-header backgroundColorCardHeader">
-              <h1 className="fontForHeader">About Us</h1>
-            </div>
-            <div className="card-body px-4 row">
-              <div className="col-xl-5 col-sm-12">
-                <p className="commonparatext px-3">
-                  Government, non-government aided and unaided/permanently
-                  unaided art institutes are functioning under the Directorate
-                  of Art. Maharashtra State Board of Technical Education Act,
-                  1997 has been prepared on the lines of Maharashtra State Board
-                  of Art Education Act, 2023 so that the said institutions can
-                  be controlled effectively. The said Act has been published in
-                  the Government Gazette of Maharashtra on 19th January, 2024.
-                  Also, in the Maharashtra Government Gazette dated 23th
-                  February, 2024, the date of the said Act has been implemented
-                  from 23th February, 2024.
-                </p>
-              </div>
-              <div className="col-xl-7 col-sm-12">
-                <p className="commonparatext px-2">
-                  Maharashtra State Board of Art Education has its head office
-                  in Mumbai. Also, divisional offices of the board are
-                  functioning at Nagpur, Chhatrapati Sambhajinagar and Mumbai.
-                  There is a regulatory council of the board, the ex-officio
-                  President of this council is the Hon'ble Minister, Higher and
-                  Technical Education Department and the Hon'ble Minister of
-                  State, Higher and Technical Education Department is the Vice-
-                  President. Maharashtra State Board of Art Education conducts
-                  Higher Art Examination, Drawing Grade Examination (Elementary
-                  & Intermediate) for school students. At present 10
-                  Diploma/Certificate courses are being implemented by the
-                  Board. Every year about 8 lakh students from Maharashtra and
-                  other states appear for the Drawing Grade Examination
-                  (Elementary & Intermediate). Excellent syllabus, effective
-                  implementation, disciplined examination system is the policy
-                  of the board. The ultimate aim is to conduct the examination
-                  and declaration of results and award of certificates in a
-                  transparent and fair manner.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-sm-12">
-          <div className="card mb-3 borderforcard paddingTopxl">
-            <div className="row g-0">
-              <div className="card-body removePadding row">
-                <div className="col-lg-12 col-sm-12">
-                  <div className="pdfDiv">
-                    <iframe
-                      src={"/assets/file/GazetteSearch.pdf"}
-                      style={{ width: "100%", height: "100%" }}
-                      title="PDF"
-                    />
-                  </div>
+    return (
+        <>
+
+            <div className="row">
+                <div className="col-sm-12">
+                    <div className="card mb-3 borderforcard paddingTopxl">
+                        <div className="card-header backgroundColorCardHeader">
+                            <h1 className="fontForHeader">About Us</h1>
+                        </div>
+                        <div className="card-body px-4 row">
+                            <div className="col-xl-5 col-sm-12">
+                                <p className="commonparatext px-3">
+                                    Government, non-government aided and unaided/permanently
+                                    unaided art institutes are functioning under the Directorate
+                                    of Art. Maharashtra State Board of Technical Education Act,
+                                    1997 has been prepared on the lines of Maharashtra State Board
+                                    of Art Education Act, 2023 so that the said institutions can
+                                    be controlled effectively. The said Act has been published in
+                                    the Government Gazette of Maharashtra on 19th January, 2024.
+                                    Also, in the Maharashtra Government Gazette dated 23th
+                                    February, 2024, the date of the said Act has been implemented
+                                    from 23th February, 2024.
+                                </p>
+                            </div>
+                            <div className="col-xl-7 col-sm-12">
+                                <p className="commonparatext px-2">
+                                    Maharashtra State Board of Art Education has its head office
+                                    in Mumbai. Also, divisional offices of the board are
+                                    functioning at Nagpur, Chhatrapati Sambhajinagar and Mumbai.
+                                    There is a regulatory council of the board, the ex-officio
+                                    President of this council is the Hon'ble Minister, Higher and
+                                    Technical Education Department and the Hon'ble Minister of
+                                    State, Higher and Technical Education Department is the Vice-
+                                    President. Maharashtra State Board of Art Education conducts
+                                    Higher Art Examination, Drawing Grade Examination (Elementary
+                                    & Intermediate) for school students. At present 10
+                                    Diploma/Certificate courses are being implemented by the
+                                    Board. Every year about 8 lakh students from Maharashtra and
+                                    other states appear for the Drawing Grade Examination
+                                    (Elementary & Intermediate). Excellent syllabus, effective
+                                    implementation, disciplined examination system is the policy
+                                    of the board. The ultimate aim is to conduct the examination
+                                    and declaration of results and award of certificates in a
+                                    transparent and fair manner.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div className="col-sm-12">
+                    <div className="card mb-3 borderforcard paddingTopxl">
+                        <div className="row g-0">
+                            <div className="card-body removePadding row">
+                                <div className="col-lg-12 col-sm-12">
+                                    <div className="pdfDiv">
+                                        <iframe
+                                            src={s3 + "/files/GazetteSearch.pdf"}
+                                            style={{ width: "100%", height: "100%" }}
+                                            title="PDF"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+        </>
+    );
 }
 
 export default About;

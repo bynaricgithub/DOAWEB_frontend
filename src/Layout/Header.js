@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LatestUpdates from "../Components/HeaderComponent/LatestUpdates";
 import TopControl from "../Components/HeaderComponent/TopControl";
 import TopMenu from "../Components/HeaderComponent/TopMenu";
+import { s3 } from "../utils/Helper";
 
 function Header() {
     const [query, setQuery] = useState("");
@@ -55,7 +56,7 @@ function Header() {
                         <div className="col-xl-8 col-lg-6 col-sm-12 logoImg">
                             <a href="/" className="my-2">
                                 <img
-                                    src="/assets/Images1/DOA-logo.png"
+                                    src={s3 + "/Images1/DOA-logo.png"}
                                     className="img-fluid"
                                     alt="Logo"
                                 />
@@ -72,7 +73,7 @@ function Header() {
                             <div className="row">
                                 <div className="col-lg-4 col-sm-4 col-4 d-flex twologo logoImg3">
                                     <img
-                                        src="/assets/Images1/image.png"
+                                        src={s3 + "/Images1/image.png"}
                                         className="mx-auto"
                                         alt="Logo"
                                     />
